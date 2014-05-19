@@ -1,0 +1,1884 @@
+                                                                                                                                               /* 
+This is the main stylesheet file. To keep things easier to read we don't actually write any css here. Instead we import a bunch of other partial files.
+In Sass a partial has the following properties:
+
+- it starts with an underscore _
+- it is not automatically processed, you have to @import it
+- if it ends with .scss then you can write normal css or write sass or a combination
+
+Also, FYI, this is an example of a comment that won't get erased or compressed when Sass creates the CSS file. Putting the ! after the opening /* tells Sass not to touch it.
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, ../scss/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../scss/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../scss/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../scss/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../scss/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../scss/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../scss/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 
+==========================
+Mixins
+This is not CSS. Mixins work more like functions and help you to write CSS faster. 
+========================== 
+*/
+/* 
+==========================
+Global Styles
+These are styles that apply to every page on the site. For example:
+---------------
+Basic Element styling: body,h1,h2,h3,h4,h5,h6,p, a, a:link, a:hover, a:visited, ul, ul
+Repeated sections: header, footer
+
+I separated Navigation because it is complex and It's more likely that you will reuse it or modify code from someone else. 
+Separating it allows you to more easily change and reuse navigation code.
+========================== 
+*/
+/* apply a natural box layout model to all elements */
+/* line 18, ../scss/_global.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* 
+This is not the only thing you should do for responsive images, but it is a start. Remember that this style will not make your image or video grow any bigger than the original so you have to put in the largest version you will need.
+That can be a performance issue since small screens will download the same image as large ones.
+This article by Luke Wroblewski goes into more detail about that: http://www.lukew.com/ff/entry.asp?1851
+*/
+/* line 27, ../scss/_global.scss */
+img, video {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 40, ../scss/_global.scss */
+body {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+/* line 49, ../scss/_global.scss */
+p {
+  margin-bottom: 1em;
+}
+
+/* line 53, ../scss/_global.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia,'Times New Roman', Times ,serif;
+  font-weight: 900;
+}
+
+/* line 58, ../scss/_global.scss */
+h1 {
+  font-size: 2em;
+  line-height: 1.1;
+}
+
+/* line 59, ../scss/_global.scss */
+h2 {
+  font-size: 1.6em;
+  line-height: 1.1;
+}
+
+/* line 60, ../scss/_global.scss */
+h3 {
+  font-size: 1.4em;
+  line-height: 1.1;
+}
+
+/* line 61, ../scss/_global.scss */
+h4 {
+  font-size: 1.2em;
+  line-height: 1.1;
+}
+
+/* line 62, ../scss/_global.scss */
+h5 {
+  font-size: 1.1em;
+  line-height: 1.1;
+}
+
+/* line 63, ../scss/_global.scss */
+h6 {
+  font-size: 1em;
+  line-height: 1.1;
+}
+
+@media only screen and (min-width: 40em) {
+  /* line 67, ../scss/_global.scss */
+  body {
+    font-size: 100%;
+    line-height: 1.5;
+  }
+
+  /* line 68, ../scss/_global.scss */
+  h1 {
+    font-size: 2em;
+    line-height: 1.1;
+  }
+
+  /* line 69, ../scss/_global.scss */
+  h2 {
+    font-size: 1.8em;
+    line-height: 1.1;
+  }
+
+  /* line 70, ../scss/_global.scss */
+  h3 {
+    font-size: 1.6em;
+    line-height: 1.1;
+  }
+
+  /* line 71, ../scss/_global.scss */
+  h4 {
+    font-size: 1.4em;
+    line-height: 1.1;
+  }
+
+  /* line 72, ../scss/_global.scss */
+  h5 {
+    font-size: 1.2em;
+    line-height: 1.1;
+  }
+
+  /* line 73, ../scss/_global.scss */
+  h6 {
+    font-size: 1.1em;
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 50em) {
+  /* line 77, ../scss/_global.scss */
+  body {
+    font-size: 100%;
+    line-height: 1.5;
+  }
+
+  /* line 78, ../scss/_global.scss */
+  h1 {
+    font-size: 3em;
+    line-height: 1.1;
+  }
+
+  /* line 79, ../scss/_global.scss */
+  h2 {
+    font-size: 2.5em;
+    line-height: 1.1;
+  }
+
+  /* line 80, ../scss/_global.scss */
+  h3 {
+    font-size: 2em;
+    line-height: 1.1;
+  }
+
+  /* line 81, ../scss/_global.scss */
+  h4 {
+    font-size: 1.8em;
+    line-height: 1.1;
+  }
+
+  /* line 82, ../scss/_global.scss */
+  h5 {
+    font-size: 1.4em;
+    line-height: 1.1;
+  }
+
+  /* line 83, ../scss/_global.scss */
+  h6 {
+    font-size: 1.1em;
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 88, ../scss/_global.scss */
+  h1 {
+    font-size: 4.5em;
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 97, ../scss/_global.scss */
+  h1 {
+    font-size: 5em;
+    line-height: 1.1;
+  }
+
+  /* line 98, ../scss/_global.scss */
+  h2 {
+    font-size: 3em;
+    line-height: 1.1;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 102, ../scss/_global.scss */
+  h1 {
+    font-size: 6em;
+    line-height: 1;
+  }
+}
+/* line 109, ../scss/_global.scss */
+.header {
+  clear: both;
+  margin: 0 0;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+/* line 114, ../scss/_global.scss */
+.header .navigation nav {
+  width: 100%;
+}
+/* line 119, ../scss/_global.scss */
+.header header {
+  width: 75%;
+  padding: 0 15px;
+  float: left;
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 125, ../scss/_global.scss */
+  .header header {
+    width: 100%;
+    padding: 0 15px;
+    float: left;
+  }
+}
+
+/* line 137, ../scss/_global.scss */
+.footer {
+  clear: both;
+}
+/* line 140, ../scss/_global.scss */
+.footer .copyright {
+  width: 50%;
+  padding: 0 15px;
+  float: left;
+}
+/* line 144, ../scss/_global.scss */
+.footer .designedBy {
+  width: 50%;
+  padding: 0 15px;
+  float: left;
+  text-align: right;
+}
+
+/* copied without chaning CSS to be Sassified */
+/* responsive-nav.js 1.0.32 by @viljamis */
+/* line 5, ../scss/_responsive-nav.scss */
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+/* line 13, ../scss/_responsive-nav.scss */
+.nav-collapse li {
+  width: 100%;
+  display: block;
+}
+
+/* line 18, ../scss/_responsive-nav.scss */
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* line 27, ../scss/_responsive-nav.scss */
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+/* line 31, ../scss/_responsive-nav.scss */
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+/* line 35, ../scss/_responsive-nav.scss */
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 46, ../scss/_responsive-nav.scss */
+  .js .nav-collapse {
+    position: relative;
+  }
+
+  /* line 49, ../scss/_responsive-nav.scss */
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+
+  /* line 52, ../scss/_responsive-nav.scss */
+  .nav-toggle {
+    display: none;
+  }
+}
+/* =======================================
+    Custom Styling for Nav. You can use this, modify it or delete it.
+    This is just styling and not required for the nav to work.
+
+    The CSS above IS required and you should not delete that
+
+*/
+/*Here is default*/
+/* ------------------------------------------
+  NAVIGATION STYLES
+  (+ responsive-nav.css file is loaded in the <head>)
+--------------------------------------------- */
+/* line 75, ../scss/_responsive-nav.scss */
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 83, ../scss/_responsive-nav.scss */
+.nav-collapse,
+.nav-collapse * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 90, ../scss/_responsive-nav.scss */
+.nav-collapse,
+.nav-collapse ul {
+  list-style: none;
+  width: 100%;
+  float: left;
+}
+
+/* line 96, ../scss/_responsive-nav.scss */
+.nav-collapse li {
+  float: left;
+  width: 100%;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 102, ../scss/_responsive-nav.scss */
+  .nav-collapse li {
+    width: 25%;
+    *width: 24.9%;
+    /* IE7 Hack */
+    _width: 19%;
+    /* IE6 Hack */
+    width: 15%;
+  }
+}
+/* line 112, ../scss/_responsive-nav.scss */
+.nav-collapse a {
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  background: #f4421a;
+  border-bottom: 1px solid white;
+  padding: 0.7em 1em;
+  float: left;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 123, ../scss/_responsive-nav.scss */
+  .nav-collapse a {
+    margin: 0;
+    padding: 1em;
+    float: left;
+    text-align: center;
+    border-bottom: 0;
+    border-right: 1px solid white;
+  }
+}
+/* line 133, ../scss/_responsive-nav.scss */
+.nav-collapse ul ul a {
+  background: #ca3716;
+  padding-left: 2em;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 139, ../scss/_responsive-nav.scss */
+  .nav-collapse ul ul a {
+    display: none;
+  }
+}
+/* ------------------------------------------
+  NAV TOGGLE STYLES
+--------------------------------------------- */
+@font-face {
+  font-family: "responsivenav";
+  src: url("../icons/responsivenav.eot");
+  src: url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"), url("../icons/responsivenav.ttf") format("truetype"), url("../icons/responsivenav.woff") format("woff"), url("../icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 160, ../scss/_responsive-nav.scss */
+.nav-toggle {
+  position: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  text-indent: -999px;
+  position: relative;
+  overflow: hidden;
+  width: 70px;
+  height: 55px;
+  float: right;
+}
+
+/* line 178, ../scss/_responsive-nav.scss */
+.nav-toggle:before {
+  color: #f4421a;
+  /* Edit this to change the icon color */
+  font-family: "responsivenav", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 28px;
+  text-transform: none;
+  position: absolute;
+  content: "≡";
+  text-indent: 0;
+  text-align: center;
+  line-height: 55px;
+  speak: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* line 197, ../scss/_responsive-nav.scss */
+.nav-toggle.active::before {
+  font-size: 24px;
+  content: "x";
+}
+
+/*
+  =============================================
+
+
+And here are some customizations I made
+
+This stuff needs to be cleaned up and commented to explain
+
+*/
+/* line 223, ../scss/_responsive-nav.scss */
+.nav-toggle.active:before {
+  font-size: 24px;
+  content: "x";
+}
+
+/* line 228, ../scss/_responsive-nav.scss */
+.nav-toggle:before {
+  color: #F4421A;
+  font-family: "responsivenav",sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 28px;
+  text-transform: none;
+  position: absolute;
+  content: "≡";
+  text-indent: 0px;
+  line-height: 55px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  text-align: left;
+}
+
+/* line 246, ../scss/_responsive-nav.scss */
+a:active, a:hover {
+  outline: 0px none;
+}
+
+/* line 250, ../scss/_responsive-nav.scss */
+.nav-toggle {
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select: none;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  height: 55px;
+  line-height: 55px;
+  float: right;
+  text-indent: 25px;
+  width: 75px;
+  color: #f4421A;
+}
+
+/* 
+==========================
+Index Page (homepage)
+========================== 
+*/
+/* line 13, ../scss/pages/_index.scss */
+#home .featuredSpeakers {
+  /*compass clearfix */
+  *zoom: 1;
+  margin-bottom: 30px;
+}
+/* line 38, ../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+#home .featuredSpeakers:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 23, ../scss/pages/_index.scss */
+#home .introduction {
+  width: 100%;
+  padding: 0 15px;
+  float: left;
+  font-size: 1.3em;
+}
+/* line 28, ../scss/pages/_index.scss */
+#home .speaker {
+  width: 50%;
+  padding: 0 15px;
+  float: left;
+}
+/* line 32, ../scss/pages/_index.scss */
+#home .date {
+  width: 41.66667%;
+  padding: 0 15px;
+  float: left;
+  font-size: 1.2em;
+}
+/* line 37, ../scss/pages/_index.scss */
+#home .location {
+  width: 58.33333%;
+  padding: 0 15px;
+  float: left;
+}
+/* line 41, ../scss/pages/_index.scss */
+#home .track {
+  width: 100%;
+  padding: 0 15px;
+  float: left;
+}
+@media only screen and (min-width: 30em) {
+  /* line 9, ../scss/pages/_index.scss */
+  #home {
+    background-color: violet;
+  }
+}
+@media only screen and (min-width: 40em) {
+  /* line 9, ../scss/pages/_index.scss */
+  #home {
+    background-color: red;
+  }
+  /* line 65, ../scss/pages/_index.scss */
+  #home .speaker img {
+    width: 50%;
+    float: right;
+  }
+  /* line 69, ../scss/pages/_index.scss */
+  #home .speaker h3 {
+    width: 50%;
+    float: left;
+  }
+  /* line 73, ../scss/pages/_index.scss */
+  #home .speaker {
+    *zoom: 1;
+    margin-bottom: 30px;
+  }
+  /* line 38, ../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  #home .speaker:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@media only screen and (min-width: 50em) {
+  /* line 9, ../scss/pages/_index.scss */
+  #home {
+    background-color: green;
+  }
+  /* line 86, ../scss/pages/_index.scss */
+  #home .speaker {
+    width: 25%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 88, ../scss/pages/_index.scss */
+  #home .speaker img {
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
+  /* line 50, ../scss/_mixins.scss */
+  #home .speaker img:last-of-type {
+    float: right;
+  }
+  /* line 91, ../scss/pages/_index.scss */
+  #home .speaker h3 {
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
+  /* line 50, ../scss/_mixins.scss */
+  #home .speaker h3:last-of-type {
+    float: right;
+  }
+  /* line 96, ../scss/pages/_index.scss */
+  #home .track {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 9, ../scss/pages/_index.scss */
+  #home {
+    background-color: yellow;
+  }
+  /* line 109, ../scss/pages/_index.scss */
+  #home .featuredSpeakers h2 {
+    width: 100%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 113, ../scss/pages/_index.scss */
+  #home .speaker {
+    width: 25%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 117, ../scss/pages/_index.scss */
+  #home .featuredInfo {
+    width: 100%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 121, ../scss/pages/_index.scss */
+  #home .introduction {
+    width: 66.66667%;
+    padding: 0 15px;
+    float: left;
+    font-size: 1.6em;
+  }
+  /* line 126, ../scss/pages/_index.scss */
+  #home .date, #home .location {
+    width: 16.66667%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 130, ../scss/pages/_index.scss */
+  #home .track {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 9, ../scss/pages/_index.scss */
+  #home {
+    background-color: blue;
+    color: white;
+  }
+  /* line 141, ../scss/pages/_index.scss */
+  #home .feature {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+    clear: none;
+  }
+  /* line 145, ../scss/pages/_index.scss */
+  #home .tracks {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+    clear: none;
+    font-size: 1.2em;
+  }
+  /* line 151, ../scss/pages/_index.scss */
+  #home .introduction {
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
+  /* line 50, ../scss/_mixins.scss */
+  #home .introduction:last-of-type {
+    float: right;
+  }
+  /* line 155, ../scss/pages/_index.scss */
+  #home .date, #home .location {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+    font-size: 1.3em;
+  }
+  /* line 160, ../scss/pages/_index.scss */
+  #home .track {
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
+  /* line 50, ../scss/_mixins.scss */
+  #home .track:last-of-type {
+    float: right;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 9, ../scss/pages/_index.scss */
+  #home {
+    background-color: orange;
+  }
+}
+
+/* 
+==========================
+Schedule Page 
+========================== 
+*/
+@media only screen and (min-width: 30em) {
+  /* line 10, ../scss/pages/_schedule.scss */
+  #schedule {
+    background-color: violet;
+  }
+}
+@media only screen and (min-width: 40em) {
+  /* line 10, ../scss/pages/_schedule.scss */
+  #schedule {
+    background-color: red;
+  }
+}
+@media only screen and (min-width: 50em) {
+  /* line 10, ../scss/pages/_schedule.scss */
+  #schedule {
+    background-color: green;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 10, ../scss/pages/_schedule.scss */
+  #schedule {
+    background-color: yellow;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 10, ../scss/pages/_schedule.scss */
+  #schedule {
+    background-color: blue;
+    color: white;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 10, ../scss/pages/_schedule.scss */
+  #schedule {
+    background-color: orange;
+  }
+}
+
+/* 
+==========================
+Speakers Page 
+========================== 
+*/
+@media only screen and (min-width: 30em) {
+  /* line 7, ../scss/pages/_speakers.scss */
+  #speakers {
+    background-color: violet;
+  }
+}
+@media only screen and (min-width: 40em) {
+  /* line 7, ../scss/pages/_speakers.scss */
+  #speakers {
+    background-color: red;
+  }
+}
+@media only screen and (min-width: 50em) {
+  /* line 7, ../scss/pages/_speakers.scss */
+  #speakers {
+    background-color: green;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 7, ../scss/pages/_speakers.scss */
+  #speakers {
+    background-color: yellow;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 7, ../scss/pages/_speakers.scss */
+  #speakers {
+    background-color: blue;
+    color: white;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 7, ../scss/pages/_speakers.scss */
+  #speakers {
+    background-color: orange;
+  }
+}
+
+/* 
+==========================
+About Page 
+========================== 
+*/
+/* line 11, ../scss/pages/_about.scss */
+#about {
+  /* 
+  ----
+  TEXT STYLE
+  ----
+  */
+}
+/* line 15, ../scss/pages/_about.scss */
+#about .conference {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  clear: both;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 28, ../scss/pages/_about.scss */
+#about .date {
+  margin: auto;
+  width: 100%;
+  background-color: #F0F0F0;
+  border: none;
+  padding-left: 2px;
+  padding-right: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  float: left;
+}
+/* line 41, ../scss/pages/_about.scss */
+#about .location {
+  margin: auto;
+  width: 100%;
+  background-color: #F0F0F0;
+  border: none;
+  padding-left: 7px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  float: right;
+}
+/* line 54, ../scss/pages/_about.scss */
+#about .map {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  /*clear: both;*/
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 67, ../scss/pages/_about.scss */
+#about .directions {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  clear: both;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 80, ../scss/pages/_about.scss */
+#about .subway {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  clear: both;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 93, ../scss/pages/_about.scss */
+#about .bus {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  /*clear: both;*/
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 106, ../scss/pages/_about.scss */
+#about .path {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  clear: both;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 119, ../scss/pages/_about.scss */
+#about .car {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  /*clear: both;*/
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 138, ../scss/pages/_about.scss */
+#about h1.abo {
+  font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 20px;
+  font-weight: bold;
+  color: purple;
+  text-align: left;
+  text-indent: 10px;
+  text-decoration: none;
+  margin: 2px;
+  margin-top: 15px;
+}
+/* line 152, ../scss/pages/_about.scss */
+#about h2.abo {
+  font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 14px;
+  font-weight: normal;
+  color: #990033;
+  text-align: justify;
+  text-indent: 0px;
+  text-decoration: none;
+  margin: 10px;
+}
+/* line 165, ../scss/pages/_about.scss */
+#about h3.abo {
+  font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+  text-align: justify;
+  text-indent: 0px;
+  text-decoration: none;
+  margin: 10px;
+}
+/* line 177, ../scss/pages/_about.scss */
+#about p.abo {
+  font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 13px;
+  font-weight: normal;
+  color: black;
+  text-align: justify;
+  text-indent: 0px;
+  text-decoration: none;
+  clear: both;
+  margin: 10px;
+  line-height: 17px;
+}
+/* line 192, ../scss/pages/_about.scss */
+#about p.abodate {
+  font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 13px;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  text-indent: 10px;
+  text-decoration: none;
+  clear: both;
+  margin: 10px;
+  line-height: 17px;
+}
+/* line 207, ../scss/pages/_about.scss */
+#about p.aboloc {
+  font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 13px;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  text-indent: 10px;
+  text-decoration: none;
+  clear: both;
+  margin: 10px;
+  line-height: 17px;
+}
+@media only screen and (min-width: 30em) {
+  /* line 11, ../scss/pages/_about.scss */
+  #about {
+    background-color: violet;
+  }
+}
+@media only screen and (min-width: 40em) {
+  /* line 11, ../scss/pages/_about.scss */
+  #about {
+    background-color: red;
+  }
+}
+@media only screen and (min-width: 50em) {
+  /* line 11, ../scss/pages/_about.scss */
+  #about {
+    background-color: green;
+  }
+  /* line 246, ../scss/pages/_about.scss */
+  #about .session {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 250, ../scss/pages/_about.scss */
+  #about .commuting {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 11, ../scss/pages/_about.scss */
+  #about {
+    background-color: yellow;
+  }
+  /* line 262, ../scss/pages/_about.scss */
+  #about .session {
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
+  /* line 50, ../scss/_mixins.scss */
+  #about .session:last-of-type {
+    float: right;
+  }
+  /* line 267, ../scss/pages/_about.scss */
+  #about .commuting {
+    width: 25%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 271, ../scss/pages/_about.scss */
+  #about .car, #about .subway, #about .bus, #about .path {
+    clear: none;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 11, ../scss/pages/_about.scss */
+  #about {
+    background-color: blue;
+    color: white;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 11, ../scss/pages/_about.scss */
+  #about {
+    background-color: orange;
+  }
+  /* line 289, ../scss/pages/_about.scss */
+  #about .session {
+    width: 33.33333%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 293, ../scss/pages/_about.scss */
+  #about .map {
+    width: 66.66667%;
+    padding: 0 15px;
+    float: left;
+  }
+}
+
+/* 
+==========================
+Videos Page 
+========================== 
+*/
+@media only screen and (min-width: 30em) {
+  /* line 8, ../scss/pages/_video.scss */
+  #videos {
+    background-color: violet;
+  }
+}
+@media only screen and (min-width: 40em) {
+  /* line 8, ../scss/pages/_video.scss */
+  #videos {
+    background-color: red;
+  }
+}
+@media only screen and (min-width: 50em) {
+  /* line 8, ../scss/pages/_video.scss */
+  #videos {
+    background-color: green;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 8, ../scss/pages/_video.scss */
+  #videos {
+    background-color: yellow;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 8, ../scss/pages/_video.scss */
+  #videos {
+    background-color: blue;
+    color: white;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 8, ../scss/pages/_video.scss */
+  #videos {
+    background-color: orange;
+  }
+}
+
+/* 
+==========================
+Sessions Page 
+========================== 
+*/
+/* line 8, ../scss/pages/_sessions.scss */
+#sessions {
+  /* 
+  ----------
+  CONTAINERS STYLE
+  ----------
+  */
+  /* 
+  ----
+  TEXT STYLE
+  ----
+  */
+}
+/* line 22, ../scss/pages/_sessions.scss */
+#sessions .cw {
+  margin: 1px;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  clear: both;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 35, ../scss/pages/_sessions.scss */
+#sessions .cws {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  /*clear: both;*/
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 48, ../scss/pages/_sessions.scss */
+#sessions .fa {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  clear: both;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 61, ../scss/pages/_sessions.scss */
+#sessions .fas {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  /*clear: both;*/
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 74, ../scss/pages/_sessions.scss */
+#sessions .pa {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  clear: both;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 87, ../scss/pages/_sessions.scss */
+#sessions .pas {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  /*clear: both;*/
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 100, ../scss/pages/_sessions.scss */
+#sessions .ma {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  clear: both;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 113, ../scss/pages/_sessions.scss */
+#sessions .mas {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  /*clear: both;*/
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+/* line 134, ../scss/pages/_sessions.scss */
+#sessions h1.ses {
+  font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 20px;
+  font-weight: bold;
+  color: purple;
+  text-align: center;
+  text-indent: 0px;
+  text-decoration: none;
+  margin: 2px;
+}
+/* line 147, ../scss/pages/_sessions.scss */
+#sessions h2.ses {
+  font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 16px;
+  font-weight: bold;
+  color: #990033;
+  text-align: justify;
+  text-indent: 5px;
+  text-decoration: none;
+  margin: 7px;
+}
+/* line 160, ../scss/pages/_sessions.scss */
+#sessions h3.ses {
+  font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 14px;
+  font-weight: normal;
+  color: #990033;
+  text-align: justify;
+  text-indent: 5px;
+  text-decoration: none;
+  margin: 5px;
+}
+/* line 172, ../scss/pages/_sessions.scss */
+#sessions p.ses {
+  font-family: Tahoma, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 13px;
+  font-weight: normal;
+  color: black;
+  text-align: justify;
+  text-indent: 0px;
+  text-decoration: none;
+  /*clear:both;*/
+  margin: 10px;
+}
+/* line 185, ../scss/pages/_sessions.scss */
+#sessions p.pres {
+  font-family: Tahoma, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 13px;
+  font-weight: normal;
+  color: black;
+  text-align: justify;
+  text-indent: 0px;
+  text-decoration: none;
+  margin: 10px;
+  clear: both;
+}
+@media only screen and (min-width: 30em) {
+  /* line 8, ../scss/pages/_sessions.scss */
+  #sessions {
+    background-color: violet;
+  }
+}
+@media only screen and (min-width: 40em) {
+  /* line 8, ../scss/pages/_sessions.scss */
+  #sessions {
+    background-color: red;
+  }
+}
+@media only screen and (min-width: 50em) {
+  /* line 8, ../scss/pages/_sessions.scss */
+  #sessions {
+    background-color: green;
+  }
+  /* line 216, ../scss/pages/_sessions.scss */
+  #sessions .session {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 220, ../scss/pages/_sessions.scss */
+  #sessions .mas {
+    background-color: blue;
+  }
+  /* line 225, ../scss/pages/_sessions.scss */
+  #sessions .fa, #sessions .pa, #sessions .cw, #sessions .ma {
+    clear: both;
+    background-color: #fff;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 8, ../scss/pages/_sessions.scss */
+  #sessions {
+    background-color: yellow;
+  }
+  /* line 238, ../scss/pages/_sessions.scss */
+  #sessions .session {
+    width: 25%;
+    padding: 0 15px;
+    float: left;
+  }
+}
+@media only screen and (min-width: 80em) {
+  /* line 8, ../scss/pages/_sessions.scss */
+  #sessions {
+    background-color: blue;
+    color: white;
+  }
+}
+@media only screen and (min-width: 90em) {
+  /* line 8, ../scss/pages/_sessions.scss */
+  #sessions {
+    background-color: orange;
+  }
+}
+
+/*
+	= = = = = = = = = = = = = =
+	ALL PAGES TEMPLATE
+	= = = = = = = = = = = = = =
+	*/
+/* line 9, ../scss/_midterm.scss */
+body {
+  width: 99%;
+  margin: 0 auto;
+  border: none;
+  background-color: #808080;
+}
+
+/* 
+----------
+CONTAINERS STYLE
+----------
+*/
+/* line 23, ../scss/_midterm.scss */
+.header {
+  margin: auto;
+  width: 99%;
+  background-color: #808080;
+  padding: 10px;
+  border: none;
+}
+
+/* line 33, ../scss/_midterm.scss */
+.navigation {
+  margin: auto;
+  width: 100%;
+  background-color: #808080;
+  border: none;
+  clear: both;
+  padding-top: 3px;
+}
+
+/* line 43, ../scss/_midterm.scss */
+.navleft {
+  margin: auto;
+  width: 49%;
+  background-color: #808080;
+  border: none;
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+}
+
+/* line 55, ../scss/_midterm.scss */
+.navright {
+  margin: auto;
+  width: 49%;
+  background-color: #808080;
+  border: none;
+  float: right;
+  padding-top: 20px;
+  padding-bottom: 2px;
+  padding-left: 1px;
+}
+
+/* line 67, ../scss/_midterm.scss */
+.menu {
+  margin: auto;
+  width: 45%;
+  background-color: #808080;
+  border: none;
+  float: right;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 1px;
+  padding-right: 20px;
+}
+
+/* line 80, ../scss/_midterm.scss */
+.top {
+  margin: auto;
+  width: 98%;
+  background-color: #808080;
+  border: none;
+  float: right;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 0px;
+  clear: both;
+}
+
+/* line 94, ../scss/_midterm.scss */
+.content {
+  margin: auto;
+  width: 99%;
+  background-color: #F0F0F0;
+  border: none;
+  clear: both;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* line 107, ../scss/_midterm.scss */
+.footer {
+  margin: auto;
+  width: 99%;
+  background-color: #808080;
+  border: none;
+  clear: both;
+}
+
+/* line 116, ../scss/_midterm.scss */
+.f_address {
+  margin: auto;
+  width: 99%;
+  background-color: #808080;
+  border: none;
+  clear: both;
+}
+
+/* 
+----
+TEXT STYLE
+----
+*/
+/* line 131, ../scss/_midterm.scss */
+h1.title {
+  font-family: Century Gothic, Helvetica Neue, Tahoma, Trebuchet MS, Arial, Verdana;
+  font-size: 20px;
+  font-weight: normal;
+  color: #808080;
+  text-align: left;
+  text-indent: 0px;
+  text-decoration: none;
+}
+
+/* line 142, ../scss/_midterm.scss */
+a.nav {
+  font-family: Century Gothic, Helvetica Neue, Tahoma, Trebuchet MS, Arial, Verdana;
+  font-size: 22px;
+  font-weight: normal;
+  color: white;
+  text-align: left;
+  padding-left: 0px;
+  text-decoration: none;
+  list-style-type: none;
+  margin-left: 25px;
+}
+
+/* line 155, ../scss/_midterm.scss */
+ul {
+  font-family: Century Gothic, Helvetica Neue, Tahoma, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 13px;
+  font-weight: normal;
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+  text-decoration: none;
+  line-height: 20px;
+}
+
+/* line 169, ../scss/_midterm.scss */
+a.menu {
+  font-family: Century Gothic, Helvetica Neue, Tahoma, Trebuchet MS, Arial, Verdana;
+  font-size: 24px;
+  font-weight: normal;
+  color: white;
+  text-align: right;
+  text-indent: 0px;
+  text-decoration: none;
+}
+
+/* line 181, ../scss/_midterm.scss */
+a.top {
+  font-family: Century Gothic, Tahoma, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 16px;
+  font-weight: normal;
+  color: white;
+  text-align: center;
+  text-indent: 0px;
+  text-decoration: none;
+  margin: 15px;
+}
+
+/* line 194, ../scss/_midterm.scss */
+p.add1 {
+  font-family: Helvetica Neue, Tahoma, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 11px;
+  font-weight: bold;
+  color: #303030;
+  text-align: center;
+  text-indent: 0px;
+  text-decoration: none;
+  margin-top: 20px;
+  padding-top: 30px;
+  line-height: 15px;
+}
+
+/* line 208, ../scss/_midterm.scss */
+p.add2 {
+  font-family: Helvetica Neue, Tahoma, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 11px;
+  font-weight: normal;
+  color: #303030;
+  text-align: center;
+  text-indent: 0px;
+  text-decoration: none;
+  margin-top: 0px;
+  line-height: 15px;
+}
+
+/* line 221, ../scss/_midterm.scss */
+img.leftspeaker {
+  float: left;
+  width: 33%;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+/* line 229, ../scss/_midterm.scss */
+img.rightspeaker {
+  float: right;
+  width: 32%;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+/*
+= = = = = = = = = = = = = =
+HOME PAGE STYLE
+= = = = = = = = = = = = = =
+*/
+/* 
+----------
+CONTAINERS STYLE
+----------
+*/
+/*Nothing yet here. */
+/* 
+----
+TEXT STYLE
+----
+*/
+/* line 266, ../scss/_midterm.scss */
+h1.heading {
+  font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 20px;
+  font-weight: bold;
+  color: purple;
+  text-align: left;
+  text-indent: 10px;
+  text-decoration: none;
+  margin: 2px;
+  margin-top: 15px;
+}
+
+/* line 279, ../scss/_midterm.scss */
+h2.subheading {
+  font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 14px;
+  font-weight: normal;
+  color: #990033;
+  text-align: justify;
+  text-indent: 0px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+/* line 291, ../scss/_midterm.scss */
+p.date {
+  font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 13px;
+  font-weight: normal;
+  color: black;
+  text-align: left;
+  text-indent: 0px;
+  text-decoration: none;
+  clear: both;
+  margin: 10px;
+  line-height: 17px;
+}
+
+/* line 305, ../scss/_midterm.scss */
+p.address {
+  font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 13px;
+  font-weight: normal;
+  color: black;
+  text-align: center;
+  text-indent: 0px;
+  text-decoration: none;
+  clear: both;
+  margin: 10px;
+  line-height: 17px;
+}
+
+/* line 319, ../scss/_midterm.scss */
+p.info {
+  font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 13px;
+  font-weight: normal;
+  color: black;
+  text-align: justify;
+  text-indent: 0px;
+  text-decoration: none;
+  clear: both;
+  margin: 10px;
+  line-height: 17px;
+}
+
+/*
+								= = = = = = = = = = = = = =
+								SPEAKERS PAGE STYLE
+								= = = = = = = = = = = = = =
+								*/
+/* 
+----------
+CONTAINERS STYLE
+----------
+*/
+/*Nothing yet here. */
+/* 
+----
+TEXT STYLE
+----
+*/
+/* line 364, ../scss/_midterm.scss */
+h1.spe {
+  font-family: Tahoma, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  color: #CC0052;
+  text-align: left;
+  text-indent: 12px;
+  text-decoration: none;
+}
+
+/* line 376, ../scss/_midterm.scss */
+p.spe {
+  font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 12px;
+  font-weight: normal;
+  color: black;
+  text-align: justify;
+  text-indent: 10px;
+  text-decoration: none;
+  clear: both;
+}
+
+/*
+								= = = = = = = = = = = = = =
+								SCHEDULE PAGE STYLE
+								= = = = = = = = = = = = = =
+								*/
+/* 
+----------
+CONTAINERS STYLE
+----------
+*/
+/* 
+----
+TEXT STYLE
+----
+*/
+/* line 412, ../scss/_midterm.scss */
+h1.sch {
+  font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 18px;
+  font-weight: bold;
+  color: purple;
+  text-align: justify;
+  text-indent: 12px;
+  text-decoration: none;
+}
+
+/* line 424, ../scss/_midterm.scss */
+h2.sch {
+  font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 16px;
+  font-weight: normal;
+  color: #990033;
+  text-align: justify;
+  text-indent: 15px;
+  text-decoration: none;
+}
+
+/* line 436, ../scss/_midterm.scss */
+p.sch {
+  font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 13px;
+  font-weight: normal;
+  color: black;
+  text-align: justify;
+  padding-left: 20px;
+  text-indent: 0px;
+  text-decoration: none;
+  clear: both;
+}
+
+/*
+= = = = = = = = = = = = = =
+VIDEOS PAGE STYLE
+= = = = = = = = = = = = = =
+*/
+/* 
+----------
+CONTAINERS STYLE
+----------
+*/
+/* line 464, ../scss/_midterm.scss */
+.iframe {
+  margin: auto;
+  width: 95%;
+  background-color: #F0F0F0;
+  border: none;
+  clear: both;
+  padding-left: 5px;
+}
+
+/* 
+----------
+TEXT STYLE
+----------
+*/
+/* line 483, ../scss/_midterm.scss */
+h1.vid {
+  font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 18px;
+  font-weight: bold;
+  color: purple;
+  text-align: justify;
+  text-indent: 12px;
+  text-decoration: none;
+}
+
+/* line 495, ../scss/_midterm.scss */
+p.vid {
+  font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
+  font-size: 13px;
+  font-weight: normal;
+  color: black;
+  text-align: justify;
+  padding-left: 20px;
+  text-indent: 0px;
+  text-decoration: none;
+  clear: both;
+}
