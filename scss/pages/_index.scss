@@ -5,6 +5,7 @@ Index Page (homepage)
 */
 
 
+
 //layout
 #home{
 
@@ -26,7 +27,7 @@ Index Page (homepage)
 	}
 
 	.speaker{
-		@include col(1,2);
+		@include no-col();
 	}
 
 	.date{
@@ -83,8 +84,8 @@ Index Page (homepage)
 		background-color: green;
 
 
-		.speaker{
-			@include col(1,4);
+		.info{
+			@include col(1,2);
 			img{
 				@include no-col();
 			}
@@ -93,6 +94,17 @@ Index Page (homepage)
 			}
 		}
 
+		.date{
+			@include col(1,2);
+		}
+
+		.location{
+			@include col(1,2);
+		}
+
+		.featured{
+			@include no-col();
+		}
 		.track{
 			@include col(2,4);
 		}

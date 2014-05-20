@@ -31,6 +31,21 @@ Speakers Page
 	@include breakpoint(medium){
 		background-color: green;
 
+		.speaker{
+			@include col(5,12)
+		}
+
+		.first{
+			clear: both;
+		}
+
+		.group{
+			clear: both;
+			margin-left: 20%;
+		}
+
+
+
 	}// end medium breakpoint
 
 

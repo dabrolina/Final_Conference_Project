@@ -587,77 +587,81 @@ a:active, a:hover {
 Index Page (homepage)
 ========================== 
 */
-/* line 13, ../scss/pages/_index.scss */
+/* line 14, ../scss/pages/_index.scss */
 #home .featuredSpeakers {
   /*compass clearfix */
   *zoom: 1;
   margin-bottom: 30px;
 }
-/* line 38, ../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #home .featuredSpeakers:after {
   content: "";
   display: table;
   clear: both;
 }
-/* line 23, ../scss/pages/_index.scss */
+/* line 24, ../scss/pages/_index.scss */
 #home .introduction {
   width: 100%;
   padding: 0 15px;
   float: left;
   font-size: 1.3em;
 }
-/* line 28, ../scss/pages/_index.scss */
+/* line 29, ../scss/pages/_index.scss */
 #home .speaker {
-  width: 50%;
-  padding: 0 15px;
-  float: left;
+  width: 100%;
+  padding: 0;
+  float: none;
 }
-/* line 32, ../scss/pages/_index.scss */
+/* line 50, ../scss/_mixins.scss */
+#home .speaker:last-of-type {
+  float: right;
+}
+/* line 33, ../scss/pages/_index.scss */
 #home .date {
   width: 41.66667%;
   padding: 0 15px;
   float: left;
   font-size: 1.2em;
 }
-/* line 37, ../scss/pages/_index.scss */
+/* line 38, ../scss/pages/_index.scss */
 #home .location {
   width: 58.33333%;
   padding: 0 15px;
   float: left;
 }
-/* line 41, ../scss/pages/_index.scss */
+/* line 42, ../scss/pages/_index.scss */
 #home .track {
   width: 100%;
   padding: 0 15px;
   float: left;
 }
 @media only screen and (min-width: 30em) {
-  /* line 9, ../scss/pages/_index.scss */
+  /* line 10, ../scss/pages/_index.scss */
   #home {
     background-color: violet;
   }
 }
 @media only screen and (min-width: 40em) {
-  /* line 9, ../scss/pages/_index.scss */
+  /* line 10, ../scss/pages/_index.scss */
   #home {
     background-color: red;
   }
-  /* line 65, ../scss/pages/_index.scss */
+  /* line 66, ../scss/pages/_index.scss */
   #home .speaker img {
     width: 50%;
     float: right;
   }
-  /* line 69, ../scss/pages/_index.scss */
+  /* line 70, ../scss/pages/_index.scss */
   #home .speaker h3 {
     width: 50%;
     float: left;
   }
-  /* line 73, ../scss/pages/_index.scss */
+  /* line 74, ../scss/pages/_index.scss */
   #home .speaker {
     *zoom: 1;
     margin-bottom: 30px;
   }
-  /* line 38, ../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 38, ../../../../../../Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
   #home .speaker:after {
     content: "";
     display: table;
@@ -665,37 +669,59 @@ Index Page (homepage)
   }
 }
 @media only screen and (min-width: 50em) {
-  /* line 9, ../scss/pages/_index.scss */
+  /* line 10, ../scss/pages/_index.scss */
   #home {
     background-color: green;
   }
-  /* line 86, ../scss/pages/_index.scss */
-  #home .speaker {
-    width: 25%;
+  /* line 87, ../scss/pages/_index.scss */
+  #home .info {
+    width: 50%;
     padding: 0 15px;
     float: left;
   }
-  /* line 88, ../scss/pages/_index.scss */
-  #home .speaker img {
+  /* line 89, ../scss/pages/_index.scss */
+  #home .info img {
     width: 100%;
     padding: 0;
     float: none;
   }
   /* line 50, ../scss/_mixins.scss */
-  #home .speaker img:last-of-type {
+  #home .info img:last-of-type {
     float: right;
   }
-  /* line 91, ../scss/pages/_index.scss */
-  #home .speaker h3 {
+  /* line 92, ../scss/pages/_index.scss */
+  #home .info h3 {
     width: 100%;
     padding: 0;
     float: none;
   }
   /* line 50, ../scss/_mixins.scss */
-  #home .speaker h3:last-of-type {
+  #home .info h3:last-of-type {
     float: right;
   }
-  /* line 96, ../scss/pages/_index.scss */
+  /* line 97, ../scss/pages/_index.scss */
+  #home .date {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 101, ../scss/pages/_index.scss */
+  #home .location {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 105, ../scss/pages/_index.scss */
+  #home .featured {
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
+  /* line 50, ../scss/_mixins.scss */
+  #home .featured:last-of-type {
+    float: right;
+  }
+  /* line 108, ../scss/pages/_index.scss */
   #home .track {
     width: 50%;
     padding: 0 15px;
@@ -703,42 +729,42 @@ Index Page (homepage)
   }
 }
 @media only screen and (min-width: 67.5em) {
-  /* line 9, ../scss/pages/_index.scss */
+  /* line 10, ../scss/pages/_index.scss */
   #home {
     background-color: yellow;
   }
-  /* line 109, ../scss/pages/_index.scss */
+  /* line 121, ../scss/pages/_index.scss */
   #home .featuredSpeakers h2 {
     width: 100%;
     padding: 0 15px;
     float: left;
   }
-  /* line 113, ../scss/pages/_index.scss */
+  /* line 125, ../scss/pages/_index.scss */
   #home .speaker {
     width: 25%;
     padding: 0 15px;
     float: left;
   }
-  /* line 117, ../scss/pages/_index.scss */
+  /* line 129, ../scss/pages/_index.scss */
   #home .featuredInfo {
     width: 100%;
     padding: 0 15px;
     float: left;
   }
-  /* line 121, ../scss/pages/_index.scss */
+  /* line 133, ../scss/pages/_index.scss */
   #home .introduction {
     width: 66.66667%;
     padding: 0 15px;
     float: left;
     font-size: 1.6em;
   }
-  /* line 126, ../scss/pages/_index.scss */
+  /* line 138, ../scss/pages/_index.scss */
   #home .date, #home .location {
     width: 16.66667%;
     padding: 0 15px;
     float: left;
   }
-  /* line 130, ../scss/pages/_index.scss */
+  /* line 142, ../scss/pages/_index.scss */
   #home .track {
     width: 50%;
     padding: 0 15px;
@@ -746,19 +772,19 @@ Index Page (homepage)
   }
 }
 @media only screen and (min-width: 80em) {
-  /* line 9, ../scss/pages/_index.scss */
+  /* line 10, ../scss/pages/_index.scss */
   #home {
     background-color: blue;
     color: white;
   }
-  /* line 141, ../scss/pages/_index.scss */
+  /* line 153, ../scss/pages/_index.scss */
   #home .feature {
     width: 50%;
     padding: 0 15px;
     float: left;
     clear: none;
   }
-  /* line 145, ../scss/pages/_index.scss */
+  /* line 157, ../scss/pages/_index.scss */
   #home .tracks {
     width: 50%;
     padding: 0 15px;
@@ -766,7 +792,7 @@ Index Page (homepage)
     clear: none;
     font-size: 1.2em;
   }
-  /* line 151, ../scss/pages/_index.scss */
+  /* line 163, ../scss/pages/_index.scss */
   #home .introduction {
     width: 100%;
     padding: 0;
@@ -776,14 +802,14 @@ Index Page (homepage)
   #home .introduction:last-of-type {
     float: right;
   }
-  /* line 155, ../scss/pages/_index.scss */
+  /* line 167, ../scss/pages/_index.scss */
   #home .date, #home .location {
     width: 50%;
     padding: 0 15px;
     float: left;
     font-size: 1.3em;
   }
-  /* line 160, ../scss/pages/_index.scss */
+  /* line 172, ../scss/pages/_index.scss */
   #home .track {
     width: 100%;
     padding: 0;
@@ -795,7 +821,7 @@ Index Page (homepage)
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 9, ../scss/pages/_index.scss */
+  /* line 10, ../scss/pages/_index.scss */
   #home {
     background-color: orange;
   }
@@ -865,6 +891,21 @@ Speakers Page
   /* line 7, ../scss/pages/_speakers.scss */
   #speakers {
     background-color: green;
+  }
+  /* line 34, ../scss/pages/_speakers.scss */
+  #speakers .speaker {
+    width: 41.66667%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 38, ../scss/pages/_speakers.scss */
+  #speakers .first {
+    clear: both;
+  }
+  /* line 42, ../scss/pages/_speakers.scss */
+  #speakers .group {
+    clear: both;
+    margin-left: 20%;
   }
 }
 @media only screen and (min-width: 67.5em) {
@@ -1141,25 +1182,24 @@ About Page
   /* line 11, ../scss/pages/_about.scss */
   #about {
     background-color: blue;
-    color: white;
+  }
+  /* line 281, ../scss/pages/_about.scss */
+  #about .session {
+    width: 33.33333%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 285, ../scss/pages/_about.scss */
+  #about .map {
+    width: 66.66667%;
+    padding: 0 15px;
+    float: left;
   }
 }
 @media only screen and (min-width: 90em) {
   /* line 11, ../scss/pages/_about.scss */
   #about {
     background-color: orange;
-  }
-  /* line 289, ../scss/pages/_about.scss */
-  #about .session {
-    width: 33.33333%;
-    padding: 0 15px;
-    float: left;
-  }
-  /* line 293, ../scss/pages/_about.scss */
-  #about .map {
-    width: 66.66667%;
-    padding: 0 15px;
-    float: left;
   }
 }
 
@@ -1667,18 +1707,18 @@ img.rightspeaker {
 HOME PAGE STYLE
 = = = = = = = = = = = = = =
 */
-/* 
-----------
-CONTAINERS STYLE
-----------
-*/
+/* line 245, ../scss/_midterm.scss */
+.person {
+  clear: both;
+}
+
 /*Nothing yet here. */
 /* 
 ----
 TEXT STYLE
 ----
 */
-/* line 266, ../scss/_midterm.scss */
+/* line 264, ../scss/_midterm.scss */
 h1.heading {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 20px;
@@ -1691,7 +1731,7 @@ h1.heading {
   margin-top: 15px;
 }
 
-/* line 279, ../scss/_midterm.scss */
+/* line 277, ../scss/_midterm.scss */
 h2.subheading {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 14px;
@@ -1703,7 +1743,7 @@ h2.subheading {
   margin: 10px;
 }
 
-/* line 291, ../scss/_midterm.scss */
+/* line 289, ../scss/_midterm.scss */
 p.date {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
@@ -1717,7 +1757,7 @@ p.date {
   line-height: 17px;
 }
 
-/* line 305, ../scss/_midterm.scss */
+/* line 303, ../scss/_midterm.scss */
 p.address {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
@@ -1731,7 +1771,7 @@ p.address {
   line-height: 17px;
 }
 
-/* line 319, ../scss/_midterm.scss */
+/* line 317, ../scss/_midterm.scss */
 p.info {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
@@ -1750,18 +1790,18 @@ p.info {
 								SPEAKERS PAGE STYLE
 								= = = = = = = = = = = = = =
 								*/
-/* 
-----------
-CONTAINERS STYLE
-----------
-*/
+/* line 339, ../scss/_midterm.scss */
+.speaker {
+  /*clear: both;*/
+}
+
 /*Nothing yet here. */
 /* 
 ----
 TEXT STYLE
 ----
 */
-/* line 364, ../scss/_midterm.scss */
+/* line 360, ../scss/_midterm.scss */
 h1.spe {
   font-family: Tahoma, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 14px;
@@ -1772,7 +1812,7 @@ h1.spe {
   text-decoration: none;
 }
 
-/* line 376, ../scss/_midterm.scss */
+/* line 372, ../scss/_midterm.scss */
 p.spe {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 12px;
@@ -1799,7 +1839,7 @@ CONTAINERS STYLE
 TEXT STYLE
 ----
 */
-/* line 412, ../scss/_midterm.scss */
+/* line 408, ../scss/_midterm.scss */
 h1.sch {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 18px;
@@ -1810,7 +1850,7 @@ h1.sch {
   text-decoration: none;
 }
 
-/* line 424, ../scss/_midterm.scss */
+/* line 420, ../scss/_midterm.scss */
 h2.sch {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 16px;
@@ -1821,7 +1861,7 @@ h2.sch {
   text-decoration: none;
 }
 
-/* line 436, ../scss/_midterm.scss */
+/* line 432, ../scss/_midterm.scss */
 p.sch {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
@@ -1844,7 +1884,7 @@ VIDEOS PAGE STYLE
 CONTAINERS STYLE
 ----------
 */
-/* line 464, ../scss/_midterm.scss */
+/* line 460, ../scss/_midterm.scss */
 .iframe {
   margin: auto;
   width: 95%;
@@ -1859,7 +1899,7 @@ CONTAINERS STYLE
 TEXT STYLE
 ----------
 */
-/* line 483, ../scss/_midterm.scss */
+/* line 479, ../scss/_midterm.scss */
 h1.vid {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 18px;
@@ -1870,7 +1910,7 @@ h1.vid {
   text-decoration: none;
 }
 
-/* line 495, ../scss/_midterm.scss */
+/* line 491, ../scss/_midterm.scss */
 p.vid {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;

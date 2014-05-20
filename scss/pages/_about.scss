@@ -277,14 +277,6 @@ p.aboloc	/*about*/
 	//x-large breakkpoint  =============================================
 	@include breakpoint(x-large){
 		background-color: blue;
-		color: white;
-
-	}//end xlarge breakpoint
-
-
-	//xx-large breakpoint  =============================================
-	@include breakpoint(xx-large){
-		background-color: orange;
 
 		.session{
 			@include col(4,12);
@@ -293,6 +285,15 @@ p.aboloc	/*about*/
 		.map{
 			@include col(8,12)
 		}
+
+	}//end xlarge breakpoint
+
+
+	//xx-large breakpoint  =============================================
+	@include breakpoint(xx-large){
+		background-color: orange;
+
+
 
 
 

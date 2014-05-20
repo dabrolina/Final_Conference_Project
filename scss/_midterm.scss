@@ -241,12 +241,10 @@ img.rightspeaker
 								*/
 
 
-/* 
-----------
-CONTAINERS STYLE
-----------
-*/
-
+.person
+	{
+		clear: both;
+	}
 
 
 
@@ -337,12 +335,10 @@ p.info	/*home*/
 								= = = = = = = = = = = = = =
 								*/
 
-
-/* 
-----------
-CONTAINERS STYLE
-----------
-*/
+.speaker
+	{
+		/*clear: both;*/
+	}
 
 
 
