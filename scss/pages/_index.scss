@@ -17,7 +17,7 @@ Index Page (homepage)
 		margin-bottom: $spacer;
 	}
 
-	.featuredInfo{
+	/*.featuredInfo{
 		
 	}
 
@@ -42,7 +42,7 @@ Index Page (homepage)
 	.track{
 		@include col(1,1);
 	}
-
+*/
 
 
 	//x-small =============================================
@@ -54,7 +54,7 @@ Index Page (homepage)
 	//small =============================================
 	@include breakpoint(small){
 		background-color: red;
-		.featuredInfo{
+		/*.featuredInfo{
 		//	@include no-col();
 		}
 		.date-location{
@@ -74,7 +74,7 @@ Index Page (homepage)
 		.speaker{
 			@include pie-clearfix();
 			margin-bottom: $spacer;
-		}
+		}*/
 
 	}//end small
 
@@ -84,8 +84,8 @@ Index Page (homepage)
 		background-color: green;
 
 
-		.info{
-			@include col(1,2);
+		/*.info{
+			background-color: blue;
 			img{
 				@include no-col();
 			}
@@ -93,20 +93,40 @@ Index Page (homepage)
 				@include no-col();
 			}
 		}
+*/
+		.intro{
+			@include col(5,12);
+			margin-left: 5%
+		}
 
 		.date{
-			@include col(1,2);
+			@include col(5,12);
+			margin-left: 5%;
 		}
 
 		.location{
-			@include col(1,2);
+			@include col(5,12);
+			margin-left: 5%
 		}
 
 		.featured{
 			@include no-col();
 		}
 		.track{
-			@include col(2,4);
+			@include no-col()/*col(2,4)*/;
+		}
+
+		.person{
+			@include col(4,12)
+		}
+
+		.first{
+			clear: both;
+			margin-left: 17%;
+		}
+
+		.workshop{
+			@include col(3,12);
 		}
 	}
 
@@ -116,7 +136,7 @@ Index Page (homepage)
 	@include breakpoint(large){
 		background-color: yellow;
 
-		.featuredSpeakers{
+		/*.featuredSpeakers{
 			//@include col(12,12);
 			h2{
 				@include col(1,1);
@@ -141,7 +161,7 @@ Index Page (homepage)
 
 		.track{
 			@include col(6,12);
-		}
+		}*/
 	}//end large breakpoint
 
 	//x-large breakkpoint  =============================================

@@ -107,175 +107,6 @@ img, video {
   height: auto;
 }
 
-/* line 40, ../scss/_global.scss */
-body {
-  font-family: sans-serif;
-  font-size: 100%;
-  line-height: 1.5;
-  color: #333;
-  background-color: #fff;
-}
-
-/* line 49, ../scss/_global.scss */
-p {
-  margin-bottom: 1em;
-}
-
-/* line 53, ../scss/_global.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: Georgia,'Times New Roman', Times ,serif;
-  font-weight: 900;
-}
-
-/* line 58, ../scss/_global.scss */
-h1 {
-  font-size: 2em;
-  line-height: 1.1;
-}
-
-/* line 59, ../scss/_global.scss */
-h2 {
-  font-size: 1.6em;
-  line-height: 1.1;
-}
-
-/* line 60, ../scss/_global.scss */
-h3 {
-  font-size: 1.4em;
-  line-height: 1.1;
-}
-
-/* line 61, ../scss/_global.scss */
-h4 {
-  font-size: 1.2em;
-  line-height: 1.1;
-}
-
-/* line 62, ../scss/_global.scss */
-h5 {
-  font-size: 1.1em;
-  line-height: 1.1;
-}
-
-/* line 63, ../scss/_global.scss */
-h6 {
-  font-size: 1em;
-  line-height: 1.1;
-}
-
-@media only screen and (min-width: 40em) {
-  /* line 67, ../scss/_global.scss */
-  body {
-    font-size: 100%;
-    line-height: 1.5;
-  }
-
-  /* line 68, ../scss/_global.scss */
-  h1 {
-    font-size: 2em;
-    line-height: 1.1;
-  }
-
-  /* line 69, ../scss/_global.scss */
-  h2 {
-    font-size: 1.8em;
-    line-height: 1.1;
-  }
-
-  /* line 70, ../scss/_global.scss */
-  h3 {
-    font-size: 1.6em;
-    line-height: 1.1;
-  }
-
-  /* line 71, ../scss/_global.scss */
-  h4 {
-    font-size: 1.4em;
-    line-height: 1.1;
-  }
-
-  /* line 72, ../scss/_global.scss */
-  h5 {
-    font-size: 1.2em;
-    line-height: 1.1;
-  }
-
-  /* line 73, ../scss/_global.scss */
-  h6 {
-    font-size: 1.1em;
-    line-height: 1.1;
-  }
-}
-@media only screen and (min-width: 50em) {
-  /* line 77, ../scss/_global.scss */
-  body {
-    font-size: 100%;
-    line-height: 1.5;
-  }
-
-  /* line 78, ../scss/_global.scss */
-  h1 {
-    font-size: 3em;
-    line-height: 1.1;
-  }
-
-  /* line 79, ../scss/_global.scss */
-  h2 {
-    font-size: 2.5em;
-    line-height: 1.1;
-  }
-
-  /* line 80, ../scss/_global.scss */
-  h3 {
-    font-size: 2em;
-    line-height: 1.1;
-  }
-
-  /* line 81, ../scss/_global.scss */
-  h4 {
-    font-size: 1.8em;
-    line-height: 1.1;
-  }
-
-  /* line 82, ../scss/_global.scss */
-  h5 {
-    font-size: 1.4em;
-    line-height: 1.1;
-  }
-
-  /* line 83, ../scss/_global.scss */
-  h6 {
-    font-size: 1.1em;
-    line-height: 1.1;
-  }
-}
-@media only screen and (min-width: 67.5em) {
-  /* line 88, ../scss/_global.scss */
-  h1 {
-    font-size: 4.5em;
-    line-height: 1.1;
-  }
-}
-@media only screen and (min-width: 80em) {
-  /* line 97, ../scss/_global.scss */
-  h1 {
-    font-size: 5em;
-    line-height: 1.1;
-  }
-
-  /* line 98, ../scss/_global.scss */
-  h2 {
-    font-size: 3em;
-    line-height: 1.1;
-  }
-}
-@media only screen and (min-width: 90em) {
-  /* line 102, ../scss/_global.scss */
-  h1 {
-    font-size: 6em;
-    line-height: 1;
-  }
-}
 /* line 109, ../scss/_global.scss */
 .header {
   clear: both;
@@ -587,53 +418,46 @@ a:active, a:hover {
 Index Page (homepage)
 ========================== 
 */
+/* line 10, ../scss/pages/_index.scss */
+#home {
+  	/*.featuredInfo{
+  		
+  	}
+  
+  	.introduction{
+  		@include col(1,1);
+  		font-size: 1.3em;
+  	}
+  
+  	.speaker{
+  		@include no-col();
+  	}
+  
+  	.date{
+  		@include col(5,12);
+  		font-size: 1.2em;
+  	}
+  
+  	.location{
+  		@include col(7,12);
+  	}
+  
+  	.track{
+  		@include col(1,1);
+  	}
+  */
+}
 /* line 14, ../scss/pages/_index.scss */
 #home .featuredSpeakers {
   /*compass clearfix */
   *zoom: 1;
   margin-bottom: 30px;
 }
-/* line 38, ../../../../../../Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, ../../../../../../program files (x86)/scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 #home .featuredSpeakers:after {
   content: "";
   display: table;
   clear: both;
-}
-/* line 24, ../scss/pages/_index.scss */
-#home .introduction {
-  width: 100%;
-  padding: 0 15px;
-  float: left;
-  font-size: 1.3em;
-}
-/* line 29, ../scss/pages/_index.scss */
-#home .speaker {
-  width: 100%;
-  padding: 0;
-  float: none;
-}
-/* line 50, ../scss/_mixins.scss */
-#home .speaker:last-of-type {
-  float: right;
-}
-/* line 33, ../scss/pages/_index.scss */
-#home .date {
-  width: 41.66667%;
-  padding: 0 15px;
-  float: left;
-  font-size: 1.2em;
-}
-/* line 38, ../scss/pages/_index.scss */
-#home .location {
-  width: 58.33333%;
-  padding: 0 15px;
-  float: left;
-}
-/* line 42, ../scss/pages/_index.scss */
-#home .track {
-  width: 100%;
-  padding: 0 15px;
-  float: left;
 }
 @media only screen and (min-width: 30em) {
   /* line 10, ../scss/pages/_index.scss */
@@ -645,73 +469,66 @@ Index Page (homepage)
   /* line 10, ../scss/pages/_index.scss */
   #home {
     background-color: red;
-  }
-  /* line 66, ../scss/pages/_index.scss */
-  #home .speaker img {
-    width: 50%;
-    float: right;
-  }
-  /* line 70, ../scss/pages/_index.scss */
-  #home .speaker h3 {
-    width: 50%;
-    float: left;
-  }
-  /* line 74, ../scss/pages/_index.scss */
-  #home .speaker {
-    *zoom: 1;
-    margin-bottom: 30px;
-  }
-  /* line 38, ../../../../../../Program Files (x86)/Scout/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-  #home .speaker:after {
-    content: "";
-    display: table;
-    clear: both;
+    /*.featuredInfo{
+    //	@include no-col();
+    }
+    .date-location{
+    //	@include col(1,3);
+    }
+    .featuredSpeakers{
+    //	@include col(2,3);
+    }
+    .speaker img{
+    	width:50%;
+    	float:right;
+    }
+    .speaker h3{
+    	width:50%;
+    	float: left;
+    }
+    .speaker{
+    	@include pie-clearfix();
+    	margin-bottom: $spacer;
+    }*/
   }
 }
 @media only screen and (min-width: 50em) {
   /* line 10, ../scss/pages/_index.scss */
   #home {
     background-color: green;
-  }
-  /* line 87, ../scss/pages/_index.scss */
-  #home .info {
-    width: 50%;
-    padding: 0 15px;
-    float: left;
-  }
-  /* line 89, ../scss/pages/_index.scss */
-  #home .info img {
-    width: 100%;
-    padding: 0;
-    float: none;
-  }
-  /* line 50, ../scss/_mixins.scss */
-  #home .info img:last-of-type {
-    float: right;
-  }
-  /* line 92, ../scss/pages/_index.scss */
-  #home .info h3 {
-    width: 100%;
-    padding: 0;
-    float: none;
-  }
-  /* line 50, ../scss/_mixins.scss */
-  #home .info h3:last-of-type {
-    float: right;
+    		/*.info{
+    			background-color: blue;
+    			img{
+    				@include no-col();
+    			}
+    			h3{
+    				@include no-col();
+    			}
+    		}
+    */
   }
   /* line 97, ../scss/pages/_index.scss */
+  #home .intro {
+    width: 41.66667%;
+    padding: 0 15px;
+    float: left;
+    margin-left: 5%;
+  }
+  /* line 102, ../scss/pages/_index.scss */
   #home .date {
-    width: 50%;
+    width: 41.66667%;
     padding: 0 15px;
     float: left;
+    margin-left: 5%;
   }
-  /* line 101, ../scss/pages/_index.scss */
+  /* line 107, ../scss/pages/_index.scss */
   #home .location {
-    width: 50%;
+    width: 41.66667%;
     padding: 0 15px;
     float: left;
+    margin-left: 5%;
   }
-  /* line 105, ../scss/pages/_index.scss */
+  /* line 112, ../scss/pages/_index.scss */
   #home .featured {
     width: 100%;
     padding: 0;
@@ -721,9 +538,30 @@ Index Page (homepage)
   #home .featured:last-of-type {
     float: right;
   }
-  /* line 108, ../scss/pages/_index.scss */
+  /* line 115, ../scss/pages/_index.scss */
   #home .track {
-    width: 50%;
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
+  /* line 50, ../scss/_mixins.scss */
+  #home .track:last-of-type {
+    float: right;
+  }
+  /* line 119, ../scss/pages/_index.scss */
+  #home .person {
+    width: 33.33333%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 123, ../scss/pages/_index.scss */
+  #home .first {
+    clear: both;
+    margin-left: 17%;
+  }
+  /* line 128, ../scss/pages/_index.scss */
+  #home .workshop {
+    width: 25%;
     padding: 0 15px;
     float: left;
   }
@@ -732,43 +570,32 @@ Index Page (homepage)
   /* line 10, ../scss/pages/_index.scss */
   #home {
     background-color: yellow;
-  }
-  /* line 121, ../scss/pages/_index.scss */
-  #home .featuredSpeakers h2 {
-    width: 100%;
-    padding: 0 15px;
-    float: left;
-  }
-  /* line 125, ../scss/pages/_index.scss */
-  #home .speaker {
-    width: 25%;
-    padding: 0 15px;
-    float: left;
-  }
-  /* line 129, ../scss/pages/_index.scss */
-  #home .featuredInfo {
-    width: 100%;
-    padding: 0 15px;
-    float: left;
-  }
-  /* line 133, ../scss/pages/_index.scss */
-  #home .introduction {
-    width: 66.66667%;
-    padding: 0 15px;
-    float: left;
-    font-size: 1.6em;
-  }
-  /* line 138, ../scss/pages/_index.scss */
-  #home .date, #home .location {
-    width: 16.66667%;
-    padding: 0 15px;
-    float: left;
-  }
-  /* line 142, ../scss/pages/_index.scss */
-  #home .track {
-    width: 50%;
-    padding: 0 15px;
-    float: left;
+    		/*.featuredSpeakers{
+    			//@include col(12,12);
+    			h2{
+    				@include col(1,1);
+    			}
+    		}
+    		.speaker{
+    			@include col(1,4);
+    		}
+    
+    		.featuredInfo{
+    			@include col(12,12);
+    		}
+    
+    		.introduction{
+    			@include col(8,12);
+    			font-size: 1.6em
+    		}
+    
+    		.date, .location{
+    			@include col(2,12);
+    		}
+    
+    		.track{
+    			@include col(6,12);
+    		}*/
   }
 }
 @media only screen and (min-width: 80em) {
@@ -777,14 +604,14 @@ Index Page (homepage)
     background-color: blue;
     color: white;
   }
-  /* line 153, ../scss/pages/_index.scss */
+  /* line 173, ../scss/pages/_index.scss */
   #home .feature {
     width: 50%;
     padding: 0 15px;
     float: left;
     clear: none;
   }
-  /* line 157, ../scss/pages/_index.scss */
+  /* line 177, ../scss/pages/_index.scss */
   #home .tracks {
     width: 50%;
     padding: 0 15px;
@@ -792,7 +619,7 @@ Index Page (homepage)
     clear: none;
     font-size: 1.2em;
   }
-  /* line 163, ../scss/pages/_index.scss */
+  /* line 183, ../scss/pages/_index.scss */
   #home .introduction {
     width: 100%;
     padding: 0;
@@ -802,14 +629,14 @@ Index Page (homepage)
   #home .introduction:last-of-type {
     float: right;
   }
-  /* line 167, ../scss/pages/_index.scss */
+  /* line 187, ../scss/pages/_index.scss */
   #home .date, #home .location {
     width: 50%;
     padding: 0 15px;
     float: left;
     font-size: 1.3em;
   }
-  /* line 172, ../scss/pages/_index.scss */
+  /* line 192, ../scss/pages/_index.scss */
   #home .track {
     width: 100%;
     padding: 0;
@@ -1707,23 +1534,32 @@ img.rightspeaker {
 HOME PAGE STYLE
 = = = = = = = = = = = = = =
 */
-/* line 245, ../scss/_midterm.scss */
-.person {
-  clear: both;
-}
+/*.person
+	{
+		clear: both;
+	}
 
-/*Nothing yet here. */
+.location
+
+			
+.date
+
+
+.featured
+
+*/
 /* 
 ----
 TEXT STYLE
 ----
 */
-/* line 264, ../scss/_midterm.scss */
+/* line 267, ../scss/_midterm.scss */
 h1.heading {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 20px;
   font-weight: bold;
   color: purple;
+  clear: both;
   text-align: left;
   text-indent: 10px;
   text-decoration: none;
@@ -1731,7 +1567,7 @@ h1.heading {
   margin-top: 15px;
 }
 
-/* line 277, ../scss/_midterm.scss */
+/* line 281, ../scss/_midterm.scss */
 h2.subheading {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 14px;
@@ -1743,7 +1579,7 @@ h2.subheading {
   margin: 10px;
 }
 
-/* line 289, ../scss/_midterm.scss */
+/* line 293, ../scss/_midterm.scss */
 p.date {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
@@ -1757,7 +1593,7 @@ p.date {
   line-height: 17px;
 }
 
-/* line 303, ../scss/_midterm.scss */
+/* line 307, ../scss/_midterm.scss */
 p.address {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
@@ -1771,7 +1607,7 @@ p.address {
   line-height: 17px;
 }
 
-/* line 317, ../scss/_midterm.scss */
+/* line 321, ../scss/_midterm.scss */
 p.info {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
@@ -1790,7 +1626,7 @@ p.info {
 								SPEAKERS PAGE STYLE
 								= = = = = = = = = = = = = =
 								*/
-/* line 339, ../scss/_midterm.scss */
+/* line 343, ../scss/_midterm.scss */
 .speaker {
   /*clear: both;*/
 }
@@ -1801,7 +1637,7 @@ p.info {
 TEXT STYLE
 ----
 */
-/* line 360, ../scss/_midterm.scss */
+/* line 364, ../scss/_midterm.scss */
 h1.spe {
   font-family: Tahoma, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 14px;
@@ -1812,7 +1648,7 @@ h1.spe {
   text-decoration: none;
 }
 
-/* line 372, ../scss/_midterm.scss */
+/* line 376, ../scss/_midterm.scss */
 p.spe {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 12px;
@@ -1839,7 +1675,7 @@ CONTAINERS STYLE
 TEXT STYLE
 ----
 */
-/* line 408, ../scss/_midterm.scss */
+/* line 412, ../scss/_midterm.scss */
 h1.sch {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 18px;
@@ -1850,7 +1686,7 @@ h1.sch {
   text-decoration: none;
 }
 
-/* line 420, ../scss/_midterm.scss */
+/* line 424, ../scss/_midterm.scss */
 h2.sch {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 16px;
@@ -1861,7 +1697,7 @@ h2.sch {
   text-decoration: none;
 }
 
-/* line 432, ../scss/_midterm.scss */
+/* line 436, ../scss/_midterm.scss */
 p.sch {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
@@ -1884,7 +1720,7 @@ VIDEOS PAGE STYLE
 CONTAINERS STYLE
 ----------
 */
-/* line 460, ../scss/_midterm.scss */
+/* line 464, ../scss/_midterm.scss */
 .iframe {
   margin: auto;
   width: 95%;
@@ -1899,7 +1735,7 @@ CONTAINERS STYLE
 TEXT STYLE
 ----------
 */
-/* line 479, ../scss/_midterm.scss */
+/* line 483, ../scss/_midterm.scss */
 h1.vid {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 18px;
@@ -1910,7 +1746,7 @@ h1.vid {
   text-decoration: none;
 }
 
-/* line 491, ../scss/_midterm.scss */
+/* line 495, ../scss/_midterm.scss */
 p.vid {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
