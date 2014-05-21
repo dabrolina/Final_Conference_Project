@@ -256,6 +256,10 @@ img.rightspeaker
 
 */
 
+.introduction{
+	
+}
+
 
 /* 
 ----
@@ -317,7 +321,7 @@ p.address	/*home*/
 		line-height: 17px;
 	}
 
-p.info	/*home*/
+p.intro	/*home*/
 	{	
 		font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
 		font-size:13px;
@@ -339,11 +343,11 @@ p.info	/*home*/
 								= = = = = = = = = = = = = =
 								*/
 
-.speaker
+/*.speaker
 	{
-		/*clear: both;*/
+		clear: both;
 	}
-
+*/
 
 
 

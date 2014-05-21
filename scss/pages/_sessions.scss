@@ -21,7 +21,7 @@ CONTAINERS STYLE
 .cw
 {
 	margin: 1px;
-	width: 99%;
+	width: 100%;
 	background-color: #F0F0F0;
 	border: none;
 	clear: both;
@@ -34,7 +34,7 @@ CONTAINERS STYLE
 .cws
 {
 	margin: auto;
-	width: 99%;
+	width: 100%;
 	background-color: #F0F0F0;
 	border: none;
 	/*clear: both;*/
@@ -46,8 +46,8 @@ CONTAINERS STYLE
 
 .fa
 {
-	margin: auto;
-	width: 99%;
+	margin: 1px;
+	width: 100%;
 	background-color: #F0F0F0;
 	border: none;
 	clear: both;
@@ -60,7 +60,7 @@ CONTAINERS STYLE
 .fas
 {
 	margin: auto;
-	width: 99%;
+	width: 100%;
 	background-color: #F0F0F0;
 	border: none;
 	/*clear: both;*/
@@ -72,8 +72,8 @@ CONTAINERS STYLE
 
 .pa
 {
-	margin: auto;
-	width: 99%;
+	margin: 1px;
+	width: 100%;
 	background-color: #F0F0F0;
 	border: none;
 	clear: both;
@@ -86,7 +86,7 @@ CONTAINERS STYLE
 .pas
 {
 	margin: auto;
-	width: 99%;
+	width: 100%;
 	background-color: #F0F0F0;
 	border: none;
 	/*clear: both;*/
@@ -98,8 +98,8 @@ CONTAINERS STYLE
 
 .ma
 {
-	margin: auto;
-	width: 99%;
+	margin: 1px;
+	width: 100%;
 	background-color: #F0F0F0;
 	border: none;
 	clear: both;
@@ -112,7 +112,7 @@ CONTAINERS STYLE
 .mas
 {
 	margin: auto;
-	width: 99%;
+	width: 100%;
 	background-color: #F0F0F0;
 	border: none;
 	/*clear: both;*/
@@ -213,19 +213,22 @@ p.pres	/*sessions*/
 	//medium breakpoint =============================================
 	@include breakpoint(medium){
 		background-color: green;
-		.session{
-			@include col(1,2);
-		}
-
-		.mas{
-			background-color: blue;
+		
+		.info{
 		}
 
 
 		.fa, .pa, .cw, .ma{
 			clear: both;
-			background-color: #fff;
 			overflow: hidden;
+		}
+
+		.newline{
+			clear: both;
+		}
+
+		.session{
+			@include col(1,2);
 		}
 	}// end medium breakpoint
 
@@ -235,9 +238,7 @@ p.pres	/*sessions*/
 	@include breakpoint(large){
 		background-color: yellow;
 
-		.session{
-			@include col(1,4);
-		}
+		
 		
 
 	}//end large breakpoint
@@ -248,7 +249,21 @@ p.pres	/*sessions*/
 	@include breakpoint(x-large){
 		background-color: blue;
 		color: white;
+		
+		.info
+		{}
 
+		.session{
+			@include col(1,4);
+		}
+
+		.cws, .fas, .pas, .mas{
+			@include col(1,4);
+		}
+
+		.newline{
+			clear: none;
+		}
 	}//end xlarge breakpoint
 
 

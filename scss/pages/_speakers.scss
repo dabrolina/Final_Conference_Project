@@ -32,7 +32,7 @@ Speakers Page
 		background-color: green;
 
 		.speaker{
-			@include col(5,12)
+			@include col(5,12);
 		}
 
 		.first{

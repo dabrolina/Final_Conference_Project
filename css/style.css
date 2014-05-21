@@ -418,38 +418,9 @@ a:active, a:hover {
 Index Page (homepage)
 ========================== 
 */
-/* line 10, ../scss/pages/_index.scss */
-#home {
-  	/*.featuredInfo{
-  		
-  	}
-  
-  	.introduction{
-  		@include col(1,1);
-  		font-size: 1.3em;
-  	}
-  
-  	.speaker{
-  		@include no-col();
-  	}
-  
-  	.date{
-  		@include col(5,12);
-  		font-size: 1.2em;
-  	}
-  
-  	.location{
-  		@include col(7,12);
-  	}
-  
-  	.track{
-  		@include col(1,1);
-  	}
-  */
-}
 /* line 14, ../scss/pages/_index.scss */
 #home .featuredSpeakers {
-  /*compass clearfix */
+  /*compass clearfix*/
   *zoom: 1;
   margin-bottom: 30px;
 }
@@ -458,6 +429,46 @@ Index Page (homepage)
   content: "";
   display: table;
   clear: both;
+}
+/* line 24, ../scss/pages/_index.scss */
+#home .introduction {
+  width: 100%;
+  padding: 0 15px;
+  float: left;
+  /*font-size: 1.3em;*/
+}
+/* line 29, ../scss/pages/_index.scss */
+#home .speaker {
+  width: 100%;
+  padding: 0;
+  float: none;
+}
+/* line 50, ../scss/_mixins.scss */
+#home .speaker:last-of-type {
+  float: right;
+}
+/* line 33, ../scss/pages/_index.scss */
+#home .date {
+  width: 41.66667%;
+  padding: 0 15px;
+  float: left;
+  /*font-size: 1.2em;*/
+}
+/* line 38, ../scss/pages/_index.scss */
+#home .location {
+  width: 58.33333%;
+  padding: 0 15px;
+  float: left;
+}
+/* line 42, ../scss/pages/_index.scss */
+#home .track {
+  width: 100%;
+  padding: 0 15px;
+  float: left;
+}
+/* line 46, ../scss/pages/_index.scss */
+#home .content {
+  background-color: #F0F0F0;
 }
 @media only screen and (min-width: 30em) {
   /* line 10, ../scss/pages/_index.scss */
@@ -496,49 +507,53 @@ Index Page (homepage)
   /* line 10, ../scss/pages/_index.scss */
   #home {
     background-color: green;
-    		/*.info{
-    			background-color: blue;
-    			img{
-    				@include no-col();
-    			}
-    			h3{
-    				@include no-col();
-    			}
-    		}
+    /*.info{
+    	background-color: blue;
+    	img{
+    		@include no-col();
+    	}
+    	h3{
+    		@include no-col();
+    	}
+    }
     */
   }
-  /* line 97, ../scss/pages/_index.scss */
-  #home .intro {
+  /* line 102, ../scss/pages/_index.scss */
+  #home .content {
+    background-color: #F0F0F0;
+    color: #F0F0F0;
+  }
+  /* line 107, ../scss/pages/_index.scss */
+  #home .introduction {
     width: 41.66667%;
     padding: 0 15px;
     float: left;
-    margin-left: 5%;
+    /*background-color: red;*/
   }
-  /* line 102, ../scss/pages/_index.scss */
+  /* line 112, ../scss/pages/_index.scss */
   #home .date {
     width: 41.66667%;
     padding: 0 15px;
     float: left;
-    margin-left: 5%;
   }
-  /* line 107, ../scss/pages/_index.scss */
+  /* line 116, ../scss/pages/_index.scss */
   #home .location {
     width: 41.66667%;
     padding: 0 15px;
     float: left;
-    margin-left: 5%;
   }
-  /* line 112, ../scss/pages/_index.scss */
+  /* line 120, ../scss/pages/_index.scss */
   #home .featured {
     width: 100%;
     padding: 0;
     float: none;
+    background-color: pink;
   }
   /* line 50, ../scss/_mixins.scss */
   #home .featured:last-of-type {
     float: right;
   }
-  /* line 115, ../scss/pages/_index.scss */
+  /* line 124, ../scss/pages/_index.scss */
   #home .track {
     width: 100%;
     padding: 0;
@@ -548,18 +563,18 @@ Index Page (homepage)
   #home .track:last-of-type {
     float: right;
   }
-  /* line 119, ../scss/pages/_index.scss */
+  /* line 128, ../scss/pages/_index.scss */
   #home .person {
     width: 33.33333%;
     padding: 0 15px;
     float: left;
   }
-  /* line 123, ../scss/pages/_index.scss */
+  /* line 132, ../scss/pages/_index.scss */
   #home .first {
     clear: both;
     margin-left: 17%;
   }
-  /* line 128, ../scss/pages/_index.scss */
+  /* line 137, ../scss/pages/_index.scss */
   #home .workshop {
     width: 25%;
     padding: 0 15px;
@@ -604,47 +619,69 @@ Index Page (homepage)
     background-color: blue;
     color: white;
   }
-  /* line 173, ../scss/pages/_index.scss */
-  #home .feature {
-    width: 50%;
-    padding: 0 15px;
-    float: left;
-    clear: none;
-  }
-  /* line 177, ../scss/pages/_index.scss */
-  #home .tracks {
-    width: 50%;
-    padding: 0 15px;
-    float: left;
-    clear: none;
-    font-size: 1.2em;
-  }
   /* line 183, ../scss/pages/_index.scss */
   #home .introduction {
-    width: 100%;
-    padding: 0;
-    float: none;
-  }
-  /* line 50, ../scss/_mixins.scss */
-  #home .introduction:last-of-type {
-    float: right;
+    width: 33.33333%;
+    padding: 0 15px;
+    float: left;
   }
   /* line 187, ../scss/pages/_index.scss */
-  #home .date, #home .location {
+  #home .featured {
+    width: 66.66667%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 191, ../scss/pages/_index.scss */
+  #home .workshops {
+    width: 33.33333%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 194, ../scss/pages/_index.scss */
+  #home .person {
     width: 50%;
     padding: 0 15px;
     float: left;
-    font-size: 1.3em;
+    /*background-color: green;*/
   }
-  /* line 192, ../scss/pages/_index.scss */
-  #home .track {
+  /* line 199, ../scss/pages/_index.scss */
+  #home .first {
+    /*@include no-col();
+    background-color: yellow;
+    clear: both;*/
+    margin-left: 0px;
+  }
+  /* line 206, ../scss/pages/_index.scss */
+  #home .workshop {
     width: 100%;
     padding: 0;
     float: none;
+    /*background-color: red;*/
   }
   /* line 50, ../scss/_mixins.scss */
-  #home .track:last-of-type {
+  #home .workshop:last-of-type {
     float: right;
+  }
+  /* line 211, ../scss/pages/_index.scss */
+  #home .date {
+    width: 66.66667%;
+    padding: 0 15px;
+    float: left;
+    float: right;
+    /*background-color: brown;*/
+  }
+  /* line 217, ../scss/pages/_index.scss */
+  #home .location {
+    width: 66.66667%;
+    padding: 0 15px;
+    float: left;
+    float: right;
+    /*background-color: orange;*/
+    clear: both;
+  }
+  /* line 224, ../scss/pages/_index.scss */
+  #home .content {
+    /*background-color: purple;*/
   }
 }
 @media only screen and (min-width: 90em) {
@@ -676,6 +713,34 @@ Schedule Page
   #schedule {
     background-color: green;
   }
+  /* line 39, ../scss/pages/_schedule.scss */
+  #schedule .opening {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 43, ../scss/pages/_schedule.scss */
+  #schedule .ses1, #schedule .ses2, #schedule .ses3, #schedule .ses4 {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+    clear: both;
+    float: right;
+  }
+  /* line 49, ../scss/pages/_schedule.scss */
+  #schedule .lunch {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+    clear: both;
+  }
+  /* line 54, ../scss/pages/_schedule.scss */
+  #schedule .closing {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+    clear: both;
+  }
 }
 @media only screen and (min-width: 67.5em) {
   /* line 10, ../scss/pages/_schedule.scss */
@@ -688,6 +753,36 @@ Schedule Page
   #schedule {
     background-color: blue;
     color: white;
+  }
+  /* line 78, ../scss/pages/_schedule.scss */
+  #schedule .content {
+    background-color: #F0F0F0;
+  }
+  /* line 81, ../scss/pages/_schedule.scss */
+  #schedule .opening, #schedule .ses1, #schedule .ses2 {
+    width: 33.33333%;
+    padding: 0 15px;
+    float: left;
+    clear: none;
+    overflow: hidden;
+  }
+  /* line 87, ../scss/pages/_schedule.scss */
+  #schedule .lunch, #schedule .ses3, #schedule .ses4 {
+    width: 33.33333%;
+    padding: 0 15px;
+    float: left;
+    clear: none;
+  }
+  /* line 92, ../scss/pages/_schedule.scss */
+  #schedule .closing {
+    width: 100%;
+    padding: 0;
+    float: none;
+    clear: both;
+  }
+  /* line 50, ../scss/_mixins.scss */
+  #schedule .closing:last-of-type {
+    float: right;
   }
 }
 @media only screen and (min-width: 90em) {
@@ -1094,7 +1189,7 @@ Sessions Page
 /* line 22, ../scss/pages/_sessions.scss */
 #sessions .cw {
   margin: 1px;
-  width: 99%;
+  width: 100%;
   background-color: #F0F0F0;
   border: none;
   clear: both;
@@ -1106,7 +1201,7 @@ Sessions Page
 /* line 35, ../scss/pages/_sessions.scss */
 #sessions .cws {
   margin: auto;
-  width: 99%;
+  width: 100%;
   background-color: #F0F0F0;
   border: none;
   /*clear: both;*/
@@ -1117,8 +1212,8 @@ Sessions Page
 }
 /* line 48, ../scss/pages/_sessions.scss */
 #sessions .fa {
-  margin: auto;
-  width: 99%;
+  margin: 1px;
+  width: 100%;
   background-color: #F0F0F0;
   border: none;
   clear: both;
@@ -1130,7 +1225,7 @@ Sessions Page
 /* line 61, ../scss/pages/_sessions.scss */
 #sessions .fas {
   margin: auto;
-  width: 99%;
+  width: 100%;
   background-color: #F0F0F0;
   border: none;
   /*clear: both;*/
@@ -1141,8 +1236,8 @@ Sessions Page
 }
 /* line 74, ../scss/pages/_sessions.scss */
 #sessions .pa {
-  margin: auto;
-  width: 99%;
+  margin: 1px;
+  width: 100%;
   background-color: #F0F0F0;
   border: none;
   clear: both;
@@ -1154,7 +1249,7 @@ Sessions Page
 /* line 87, ../scss/pages/_sessions.scss */
 #sessions .pas {
   margin: auto;
-  width: 99%;
+  width: 100%;
   background-color: #F0F0F0;
   border: none;
   /*clear: both;*/
@@ -1165,8 +1260,8 @@ Sessions Page
 }
 /* line 100, ../scss/pages/_sessions.scss */
 #sessions .ma {
-  margin: auto;
-  width: 99%;
+  margin: 1px;
+  width: 100%;
   background-color: #F0F0F0;
   border: none;
   clear: both;
@@ -1178,7 +1273,7 @@ Sessions Page
 /* line 113, ../scss/pages/_sessions.scss */
 #sessions .mas {
   margin: auto;
-  width: 99%;
+  width: 100%;
   background-color: #F0F0F0;
   border: none;
   /*clear: both;*/
@@ -1261,21 +1356,20 @@ Sessions Page
   #sessions {
     background-color: green;
   }
-  /* line 216, ../scss/pages/_sessions.scss */
+  /* line 221, ../scss/pages/_sessions.scss */
+  #sessions .fa, #sessions .pa, #sessions .cw, #sessions .ma {
+    clear: both;
+    overflow: hidden;
+  }
+  /* line 226, ../scss/pages/_sessions.scss */
+  #sessions .newline {
+    clear: both;
+  }
+  /* line 230, ../scss/pages/_sessions.scss */
   #sessions .session {
     width: 50%;
     padding: 0 15px;
     float: left;
-  }
-  /* line 220, ../scss/pages/_sessions.scss */
-  #sessions .mas {
-    background-color: blue;
-  }
-  /* line 225, ../scss/pages/_sessions.scss */
-  #sessions .fa, #sessions .pa, #sessions .cw, #sessions .ma {
-    clear: both;
-    background-color: #fff;
-    overflow: hidden;
   }
 }
 @media only screen and (min-width: 67.5em) {
@@ -1283,18 +1377,28 @@ Sessions Page
   #sessions {
     background-color: yellow;
   }
-  /* line 238, ../scss/pages/_sessions.scss */
-  #sessions .session {
-    width: 25%;
-    padding: 0 15px;
-    float: left;
-  }
 }
 @media only screen and (min-width: 80em) {
   /* line 8, ../scss/pages/_sessions.scss */
   #sessions {
     background-color: blue;
     color: white;
+  }
+  /* line 256, ../scss/pages/_sessions.scss */
+  #sessions .session {
+    width: 25%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 260, ../scss/pages/_sessions.scss */
+  #sessions .cws, #sessions .fas, #sessions .pas, #sessions .mas {
+    width: 25%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 264, ../scss/pages/_sessions.scss */
+  #sessions .newline {
+    clear: none;
   }
 }
 @media only screen and (min-width: 90em) {
@@ -1553,7 +1657,7 @@ HOME PAGE STYLE
 TEXT STYLE
 ----
 */
-/* line 267, ../scss/_midterm.scss */
+/* line 271, ../scss/_midterm.scss */
 h1.heading {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 20px;
@@ -1567,7 +1671,7 @@ h1.heading {
   margin-top: 15px;
 }
 
-/* line 281, ../scss/_midterm.scss */
+/* line 285, ../scss/_midterm.scss */
 h2.subheading {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 14px;
@@ -1579,7 +1683,7 @@ h2.subheading {
   margin: 10px;
 }
 
-/* line 293, ../scss/_midterm.scss */
+/* line 297, ../scss/_midterm.scss */
 p.date {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
@@ -1593,7 +1697,7 @@ p.date {
   line-height: 17px;
 }
 
-/* line 307, ../scss/_midterm.scss */
+/* line 311, ../scss/_midterm.scss */
 p.address {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
@@ -1607,8 +1711,8 @@ p.address {
   line-height: 17px;
 }
 
-/* line 321, ../scss/_midterm.scss */
-p.info {
+/* line 325, ../scss/_midterm.scss */
+p.intro {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
   font-weight: normal;
@@ -1626,18 +1730,18 @@ p.info {
 								SPEAKERS PAGE STYLE
 								= = = = = = = = = = = = = =
 								*/
-/* line 343, ../scss/_midterm.scss */
-.speaker {
-  /*clear: both;*/
-}
-
+/*.speaker
+	{
+		clear: both;
+	}
+*/
 /*Nothing yet here. */
 /* 
 ----
 TEXT STYLE
 ----
 */
-/* line 364, ../scss/_midterm.scss */
+/* line 368, ../scss/_midterm.scss */
 h1.spe {
   font-family: Tahoma, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 14px;
@@ -1648,7 +1752,7 @@ h1.spe {
   text-decoration: none;
 }
 
-/* line 376, ../scss/_midterm.scss */
+/* line 380, ../scss/_midterm.scss */
 p.spe {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 12px;
@@ -1675,7 +1779,7 @@ CONTAINERS STYLE
 TEXT STYLE
 ----
 */
-/* line 412, ../scss/_midterm.scss */
+/* line 416, ../scss/_midterm.scss */
 h1.sch {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 18px;
@@ -1686,7 +1790,7 @@ h1.sch {
   text-decoration: none;
 }
 
-/* line 424, ../scss/_midterm.scss */
+/* line 428, ../scss/_midterm.scss */
 h2.sch {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 16px;
@@ -1697,7 +1801,7 @@ h2.sch {
   text-decoration: none;
 }
 
-/* line 436, ../scss/_midterm.scss */
+/* line 440, ../scss/_midterm.scss */
 p.sch {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;
@@ -1720,7 +1824,7 @@ VIDEOS PAGE STYLE
 CONTAINERS STYLE
 ----------
 */
-/* line 464, ../scss/_midterm.scss */
+/* line 468, ../scss/_midterm.scss */
 .iframe {
   margin: auto;
   width: 95%;
@@ -1735,7 +1839,7 @@ CONTAINERS STYLE
 TEXT STYLE
 ----------
 */
-/* line 483, ../scss/_midterm.scss */
+/* line 487, ../scss/_midterm.scss */
 h1.vid {
   font-family: Century Gothic, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 18px;
@@ -1746,7 +1850,7 @@ h1.vid {
   text-decoration: none;
 }
 
-/* line 495, ../scss/_midterm.scss */
+/* line 499, ../scss/_midterm.scss */
 p.vid {
   font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
   font-size: 13px;

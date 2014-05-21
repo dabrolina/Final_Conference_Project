@@ -12,18 +12,18 @@ Index Page (homepage)
 	// default layout  =============================================
 
 	.featuredSpeakers{
-		/*compass clearfix */
+		/*compass clearfix*/ 
 		@include pie-clearfix();
 		margin-bottom: $spacer;
 	}
 
-	/*.featuredInfo{
+	.featuredInfo{
 		
 	}
 
 	.introduction{
 		@include col(1,1);
-		font-size: 1.3em;
+		/*font-size: 1.3em;*/
 	}
 
 	.speaker{
@@ -32,7 +32,7 @@ Index Page (homepage)
 
 	.date{
 		@include col(5,12);
-		font-size: 1.2em;
+		/*font-size: 1.2em;*/
 	}
 
 	.location{
@@ -42,7 +42,10 @@ Index Page (homepage)
 	.track{
 		@include col(1,1);
 	}
-*/
+
+	.content{
+		background-color: #F0F0F0;
+	}
 
 
 	//x-small =============================================
@@ -93,31 +96,37 @@ Index Page (homepage)
 				@include no-col();
 			}
 		}
-*/
-		.intro{
+		*/
+		.info{}
+
+		.content{
+			background-color: #F0F0F0;
+			color: #F0F0F0;
+		}
+
+		.introduction{
 			@include col(5,12);
-			margin-left: 5%
+			/*background-color: red;*/
 		}
 
 		.date{
 			@include col(5,12);
-			margin-left: 5%;
-		}
+					}
 
 		.location{
 			@include col(5,12);
-			margin-left: 5%
 		}
 
 		.featured{
 			@include no-col();
+			background-color: pink;
 		}
 		.track{
-			@include no-col()/*col(2,4)*/;
+			@include no-col();
 		}
 
 		.person{
-			@include col(4,12)
+			@include col(4,12);
 		}
 
 		.first{
@@ -128,7 +137,7 @@ Index Page (homepage)
 		.workshop{
 			@include col(3,12);
 		}
-	}
+	}// end medium breakpoint
 
 
 
@@ -164,34 +173,58 @@ Index Page (homepage)
 		}*/
 	}//end large breakpoint
 
-	//x-large breakkpoint  =============================================
+	//x-large breakpoint  =============================================
 	@include breakpoint(x-large){
 		background-color: blue;
 		color: white;
 
-
-		.feature{
-			@include col(1,2);
-			clear:none;
-		}
-		.tracks{
-			@include col(1,2);
-			clear:none;
-			font-size: 1.2em;
-		}
+		.info{}
 
 		.introduction{
-			@include no-col();
+			@include col(4,12);
 		}
 
-		.date, .location{
+		.featured{
+			@include col(2,3);
+		}
+
+		.workshops{
+			@include col(1,3);
+		}
+		.person{
 			@include col(1,2);
-			font-size: 1.3em;
+			/*background-color: green;*/
 		}
 
-		.track{
-			@include no-col();
+		.first{
+			/*@include no-col();
+			background-color: yellow;
+			clear: both;*/
+			margin-left: 0px;
 		}
+
+		.workshop{
+			@include no-col();
+			/*background-color: red;*/
+		}
+
+		.date{
+			@include col(2,3);
+			float: right;
+			/*background-color: brown;*/
+		}
+
+		.location{
+			@include col(2,3);
+			float: right;
+			/*background-color: orange;*/
+			clear: both;
+		}
+
+		.content{
+			/*background-color: purple;*/
+		}
+	
 
 	}//end xlarge breakpoint
 
