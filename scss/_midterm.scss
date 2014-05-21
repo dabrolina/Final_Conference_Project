@@ -256,9 +256,10 @@ img.rightspeaker
 
 */
 
-.introduction{
-	
-}
+.introduction
+	{
+	background-color: #E7D000;
+	}
 
 
 /* 
@@ -335,7 +336,33 @@ p.intro	/*home*/
 		line-height: 17px;
 	}
 
+p.speaker	/*home*/
+	{	
+		font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
+		font-size:13px;
+		font-weight: normal;
+		color:black;
+		text-align:justify;
+		text-indent: 0px;
+		text-decoration:none;
+		clear:both;
+		margin: 10px;
+		line-height: 17px;
+	}
 
+p.section	/*home*/
+	{	
+		font-family: Helvetica Neue, Trebuchet MS, Myriad Pro, Arial, Verdana;
+		font-size:13px;
+		font-weight: normal;
+		color:black;
+		text-align:justify;
+		text-indent: 0px;
+		text-decoration:none;
+		clear:both;
+		margin: 10px;
+		line-height: 17px;
+	}
 
 /*
 								= = = = = = = = = = = = = =

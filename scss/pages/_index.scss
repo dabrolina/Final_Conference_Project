@@ -23,6 +23,7 @@ Index Page (homepage)
 
 	.introduction{
 		@include col(1,1);
+		background-color: #E7D000;
 		/*font-size: 1.3em;*/
 	}
 
@@ -30,14 +31,7 @@ Index Page (homepage)
 		@include no-col();
 	}
 
-	.date{
-		@include col(5,12);
-		/*font-size: 1.2em;*/
-	}
 
-	.location{
-		@include col(7,12);
-	}
 
 	.track{
 		@include col(1,1);
@@ -101,25 +95,21 @@ Index Page (homepage)
 
 		.content{
 			background-color: #F0F0F0;
-			color: #F0F0F0;
 		}
 
 		.introduction{
-			@include col(5,12);
-			/*background-color: red;*/
+			@include col(2,3);
+			background-color: #E7D000;
 		}
 
-		.date{
-			@include col(5,12);
-					}
-
-		.location{
-			@include col(5,12);
+		.datloc{
+			@include col(1,3);
+			background-color: black;
+			margin-top: 30px;
 		}
 
 		.featured{
 			@include no-col();
-			background-color: pink;
 		}
 		.track{
 			@include no-col();
@@ -127,6 +117,7 @@ Index Page (homepage)
 
 		.person{
 			@include col(4,12);
+			margin-top: 30px;
 		}
 
 		.first{
@@ -134,9 +125,27 @@ Index Page (homepage)
 			margin-left: 17%;
 		}
 
+		.workshops{
+			margin-top: 30px;
+		}
+
 		.workshop{
 			@include col(3,12);
+			margin-top: 20px;
+			margin-bottom: 30px;
 		}
+
+		p.intro{ font-size: 24px; line-height: 30px; padding: 20px; }
+		p.speaker{ font-size: 1.0em; }
+		p.section{ font-size: 1.0em; }
+		h1.heading { color: #F49800; }
+		h1.intraheading { color: #996600; padding-top: 20px; padding-left: 16%; font-size: 23px; }
+		h2.subheading { font-size: 20px; color: #663300; font-weight: bold; }
+		p.address { color: white; font-size: 14px; }
+		p.date{ color: white; font-size: 20px; }
+
+
+
 	}// end medium breakpoint
 
 
@@ -181,50 +190,50 @@ Index Page (homepage)
 		.info{}
 
 		.introduction{
-			@include col(4,12);
+			@include col(2,3);
+			background-color: #E7D000;
 		}
 
 		.featured{
-			@include col(2,3);
+			@include no-col();
 		}
 
 		.workshops{
 			@include col(1,3);
 		}
 		.person{
-			@include col(1,2);
+			@include col(1,4);
 			/*background-color: green;*/
 		}
 
 		.first{
-			/*@include no-col();
-			background-color: yellow;
-			clear: both;*/
-			margin-left: 0px;
 		}
 
 		.workshop{
 			@include no-col();
-			/*background-color: red;*/
 		}
 
 		.date{
-			@include col(2,3);
-			float: right;
-			/*background-color: brown;*/
+			@include no-col();
 		}
 
 		.location{
-			@include col(2,3);
-			float: right;
-			/*background-color: orange;*/
+			@include no-col();
 			clear: both;
 		}
 
 		.content{
 			/*background-color: purple;*/
 		}
-	
+
+		p.intro{ font-size: 24px; line-height: 30px; padding: 20px; }
+		p.speaker{ font-size: 1.0em; }
+		p.section{ font-size: 1.0em; }
+		h1.heading { color: #F49800; display: none;}
+		h1.intraheading { color: #996600;  text-align: center; font-size: 23px; display: inline; }
+		h2.subheading { font-size: 20px; color: #663300; font-weight: bold; }
+		p.address { color: white; font-size: 17px; font-family: Arial; line-height: 20px; padding-bottom: 12px; }
+		p.date{ color: white; font-size: 30px; padding: 20px; text-align: center; }
 
 	}//end xlarge breakpoint
 
