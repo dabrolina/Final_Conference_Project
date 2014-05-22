@@ -965,8 +965,9 @@ Schedule Page
     width: 50%;
     padding: 0 15px;
     float: left;
+    background-color: #CC9900;
   }
-  /* line 43, ../scss/pages/_schedule.scss */
+  /* line 44, ../scss/pages/_schedule.scss */
   #schedule .ses1, #schedule .ses2, #schedule .ses3, #schedule .ses4 {
     width: 50%;
     padding: 0 15px;
@@ -974,19 +975,37 @@ Schedule Page
     clear: both;
     float: right;
   }
-  /* line 49, ../scss/pages/_schedule.scss */
+  /* line 50, ../scss/pages/_schedule.scss */
+  #schedule .ses1 {
+    background-color: #D1A319;
+  }
+  /* line 54, ../scss/pages/_schedule.scss */
+  #schedule .ses2 {
+    background-color: #D6AD33;
+  }
+  /* line 58, ../scss/pages/_schedule.scss */
+  #schedule .ses3 {
+    background-color: #D6AD33;
+  }
+  /* line 62, ../scss/pages/_schedule.scss */
+  #schedule .ses4 {
+    background-color: #DBB84D;
+  }
+  /* line 66, ../scss/pages/_schedule.scss */
   #schedule .lunch {
     width: 50%;
     padding: 0 15px;
     float: left;
     clear: both;
+    background-color: #D1A319;
   }
-  /* line 54, ../scss/pages/_schedule.scss */
+  /* line 72, ../scss/pages/_schedule.scss */
   #schedule .closing {
     width: 50%;
     padding: 0 15px;
     float: left;
     clear: both;
+    background-color: #D6AD33;
   }
 }
 @media only screen and (min-width: 67.5em) {
@@ -1001,11 +1020,11 @@ Schedule Page
     background-color: blue;
     color: white;
   }
-  /* line 78, ../scss/pages/_schedule.scss */
+  /* line 99, ../scss/pages/_schedule.scss */
   #schedule .content {
     background-color: #F0F0F0;
   }
-  /* line 81, ../scss/pages/_schedule.scss */
+  /* line 102, ../scss/pages/_schedule.scss */
   #schedule .opening, #schedule .ses1, #schedule .ses2 {
     width: 33.33333%;
     padding: 0 15px;
@@ -1013,14 +1032,22 @@ Schedule Page
     clear: none;
     overflow: hidden;
   }
-  /* line 87, ../scss/pages/_schedule.scss */
+  /* line 108, ../scss/pages/_schedule.scss */
+  #schedule .opening {
+    padding-bottom: 57px;
+  }
+  /* line 114, ../scss/pages/_schedule.scss */
   #schedule .lunch, #schedule .ses3, #schedule .ses4 {
     width: 33.33333%;
     padding: 0 15px;
     float: left;
     clear: none;
   }
-  /* line 92, ../scss/pages/_schedule.scss */
+  /* line 119, ../scss/pages/_schedule.scss */
+  #schedule .lunch {
+    padding-bottom: 170px;
+  }
+  /* line 123, ../scss/pages/_schedule.scss */
   #schedule .closing {
     width: 100%;
     padding: 0;
@@ -1325,28 +1352,103 @@ About Page
   /* line 256, ../scss/pages/_about.scss */
   #about .conference {
     background-color: black;
+    padding-bottom: 20px;
   }
-  /* line 260, ../scss/pages/_about.scss */
-  #about .datloc {
-    background-color: #E7D000;
-    width: 66.66667%;
+  /* line 261, ../scss/pages/_about.scss */
+  #about .date {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+    padding-bottom: 90px;
+  }
+  /* line 266, ../scss/pages/_about.scss */
+  #about .location {
+    width: 50%;
     padding: 0 15px;
     float: left;
   }
-  /* line 271, ../scss/pages/_about.scss */
-  #about p.address {
+  /* line 270, ../scss/pages/_about.scss */
+  #about .datloc {
+    width: 100%;
+    padding: 0;
+    float: none;
+    background-color: #E7D000;
+  }
+  /* line 50, ../scss/_mixins.scss */
+  #about .datloc:last-of-type {
+    float: right;
+  }
+  /* line 279, ../scss/pages/_about.scss */
+  #about .date {
+    background-color: #E7D000;
+  }
+  /* line 283, ../scss/pages/_about.scss */
+  #about .location {
+    background-color: #E7D000;
+  }
+  /* line 287, ../scss/pages/_about.scss */
+  #about h1.abo {
+    color: #996600;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 23px;
+  }
+  /* line 288, ../scss/pages/_about.scss */
+  #about h2.subheading {
+    font-size: 20px;
+    color: #663300;
+    font-weight: bold;
+  }
+  /* line 289, ../scss/pages/_about.scss */
+  #about h2.abo {
+    color: #996600;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+  }
+  /* line 290, ../scss/pages/_about.scss */
+  #about h3.abo {
+    color: black;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  /* line 291, ../scss/pages/_about.scss */
+  #about p.abo {
     color: white;
+    font-size: 15px;
+    line-height: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  /* line 292, ../scss/pages/_about.scss */
+  #about p.comm {
+    color: black;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  /* line 293, ../scss/pages/_about.scss */
+  #about p.registration {
+    color: black;
+    font-size: 12px;
+    line-height: 17px;
+    padding-bottom: 25px;
+  }
+  /* line 294, ../scss/pages/_about.scss */
+  #about p.aboloc {
+    color: black;
     font-size: 17px;
     font-family: Arial;
     line-height: 20px;
-    padding-bottom: 12px;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
-  /* line 272, ../scss/pages/_about.scss */
-  #about p.datloc {
-    color: white;
-    font-size: 30px;
+  /* line 295, ../scss/pages/_about.scss */
+  #about p.abodate {
+    color: black;
+    font-size: 24px;
     padding: 20px;
     text-align: center;
+    line-height: 30px;
   }
 }
 @media only screen and (min-width: 67.5em) {
@@ -1354,7 +1456,7 @@ About Page
   #about {
     background-color: yellow;
   }
-  /* line 282, ../scss/pages/_about.scss */
+  /* line 304, ../scss/pages/_about.scss */
   #about .session {
     width: 100%;
     padding: 0;
@@ -1370,45 +1472,51 @@ About Page
   #about {
     background-color: blue;
   }
-  /* line 299, ../scss/pages/_about.scss */
-  #about .session {
+  /* line 321, ../scss/pages/_about.scss */
+  #about .conference {
     width: 33.33333%;
     padding: 0 15px;
     float: left;
   }
-  /* line 303, ../scss/pages/_about.scss */
+  /* line 325, ../scss/pages/_about.scss */
+  #about .datloc {
+    width: 66.66667%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 329, ../scss/pages/_about.scss */
   #about .date {
     width: 50%;
     padding: 0 15px;
     float: left;
   }
-  /* line 307, ../scss/pages/_about.scss */
+  /* line 333, ../scss/pages/_about.scss */
   #about .location {
     width: 50%;
     padding: 0 15px;
     float: left;
   }
-  /* line 311, ../scss/pages/_about.scss */
+  /* line 337, ../scss/pages/_about.scss */
   #about .mapbox {
     width: 66.66667%;
     padding: 0 15px;
     float: left;
   }
-  /* line 315, ../scss/pages/_about.scss */
+  /* line 341, ../scss/pages/_about.scss */
   #about .map {
     margin: 20px;
   }
-  /* line 319, ../scss/pages/_about.scss */
+  /* line 345, ../scss/pages/_about.scss */
   #about .commuting {
     width: 25%;
     padding: 0 15px;
     float: left;
   }
-  /* line 323, ../scss/pages/_about.scss */
+  /* line 349, ../scss/pages/_about.scss */
   #about .car, #about .subway, #about .bus, #about .path {
     clear: none;
   }
-  /* line 327, ../scss/pages/_about.scss */
+  /* line 353, ../scss/pages/_about.scss */
   #about .directions {
     width: 100%;
     padding: 0;
@@ -1418,38 +1526,61 @@ About Page
   #about .directions:last-of-type {
     float: right;
   }
-  /* line 331, ../scss/pages/_about.scss */
-  #about h1.heading {
-    color: #F49800;
-  }
-  /* line 332, ../scss/pages/_about.scss */
-  #about h1.intraheading {
+  /* line 358, ../scss/pages/_about.scss */
+  #about h1.abo {
     color: #996600;
     padding-top: 20px;
-    padding-left: 16%;
+    text-align: center;
     font-size: 23px;
   }
-  /* line 333, ../scss/pages/_about.scss */
+  /* line 359, ../scss/pages/_about.scss */
   #about h2.subheading {
     font-size: 20px;
     color: #663300;
     font-weight: bold;
   }
-  /* line 335, ../scss/pages/_about.scss */
+  /* line 360, ../scss/pages/_about.scss */
+  #about h2.abo {
+    color: #996600;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+  }
+  /* line 361, ../scss/pages/_about.scss */
+  #about h3.abo {
+    color: black;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  /* line 362, ../scss/pages/_about.scss */
   #about p.abo {
     color: white;
     font-size: 15px;
     line-height: 21px;
   }
-  /* line 336, ../scss/pages/_about.scss */
+  /* line 363, ../scss/pages/_about.scss */
+  #about p.comm {
+    color: black;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  /* line 364, ../scss/pages/_about.scss */
+  #about p.registration {
+    color: black;
+    font-size: 15px;
+    line-height: 21px;
+    padding-bottom: 25px;
+  }
+  /* line 365, ../scss/pages/_about.scss */
   #about p.aboloc {
     color: black;
-    font-size: 17px;
+    font-size: 19px;
     font-family: Arial;
     line-height: 20px;
-    padding-bottom: 12px;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
-  /* line 337, ../scss/pages/_about.scss */
+  /* line 366, ../scss/pages/_about.scss */
   #about p.abodate {
     color: black;
     font-size: 30px;

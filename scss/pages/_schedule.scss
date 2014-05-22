@@ -38,6 +38,7 @@ Schedule Page
 
 		.opening{
 			@include col(1,2);
+			background-color: #CC9900;
 		}
 
 		.ses1, .ses2, .ses3, .ses4 {
@@ -46,15 +47,35 @@ Schedule Page
 			float: right;
 		}
 
+		.ses1{
+			background-color: #D1A319;
+		}
+
+		.ses2{
+			background-color: #D6AD33;
+		}
+
+		.ses3{
+			background-color: #D6AD33;
+		}
+
+		.ses4{
+			background-color: #DBB84D;
+		}
+
 		.lunch{
 			@include col(1,2);
 			clear: both;
+			background-color: #D1A319;
 		}
 
 		.closing{
 			@include col(1,2);
 			clear: both;
+			background-color: #D6AD33;
 		}
+
+
 
 	}// end medium breakpoint
 
@@ -84,9 +105,19 @@ Schedule Page
 			overflow: hidden;
 		}
 
+		.opening{
+			padding-bottom: 57px;
+		}
+
+
+
 		.lunch, .ses3, .ses4 {
 			@include col(1,3);
 			clear: none;
+		}
+
+		.lunch{
+			padding-bottom: 170px;
 		}
 
 		.closing{
