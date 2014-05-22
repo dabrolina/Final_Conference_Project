@@ -10,6 +10,8 @@ About Page
 //layout
 #about{
 
+.info{}
+
 
 .conference
 {
@@ -28,7 +30,6 @@ About Page
 {
 	margin: auto;
 	width: 100%;
-	background-color: #F0F0F0;
 	border: none;
 	padding-left: 2px;
 	padding-right: 7px;
@@ -41,7 +42,6 @@ About Page
 {
 	margin: auto;
 	width: 100%;
-	background-color: #F0F0F0;
 	border: none;
 	padding-left: 7px;
 	padding-right: 2px;
@@ -243,14 +243,34 @@ p.aboloc	/*about*/
 	@include breakpoint(medium){
 		background-color: green;
 
+		.info{}
+
 		.session{
-			@include col(1,2);
+			@include no-col();
 		}
 
 		.commuting{
 			@include col(1,2);
 		}
 		
+		.conference{
+			background-color: black;
+		}
+
+		.datloc{
+			background-color: #E7D000;
+			@include col(2,3);
+		}
+
+		.date{
+
+		}
+
+
+
+		p.address { color: white; font-size: 17px; font-family: Arial; line-height: 20px; padding-bottom: 12px; }
+		p.datloc { color: white; font-size: 30px; padding: 20px; text-align: center; }
+
 	}// end medium breakpoint
 
 
@@ -264,13 +284,7 @@ p.aboloc	/*about*/
 		}
 
 
-		.commuting{
-			@include col(3,12);
-		}
-
-		.car, .subway, .bus, .path{
-			clear: none;
-		}
+	
 
 	}//end large breakpoint
 
@@ -278,13 +292,49 @@ p.aboloc	/*about*/
 	@include breakpoint(x-large){
 		background-color: blue;
 
+		.info{
+
+		}
+
 		.session{
 			@include col(4,12);
 		}
 
-		.map{
-			@include col(8,12)
+		.date{
+			@include col(1,2);
 		}
+
+		.location{
+			@include col(1,2);
+		}
+
+		.mapbox{
+			@include col(2,3)
+		}
+
+		.map{
+			margin: 20px;
+		}
+
+		.commuting{
+			@include col(1,4);
+		}
+
+		.car, .subway, .bus, .path{
+			clear: none;
+		}
+
+		.directions{
+			@include no-col();
+		}
+
+		h1.heading { color: #F49800; }
+		h1.intraheading { color: #996600; padding-top: 20px; padding-left: 16%; font-size: 23px; }
+		h2.subheading { font-size: 20px; color: #663300; font-weight: bold;}
+		
+		p.abo { color: white; font-size: 15px; line-height: 21px; }
+		p.aboloc { color: black; font-size: 17px; font-family: Arial; line-height: 20px; padding-bottom: 12px; }
+		p.abodate { color: black; font-size: 30px; padding: 20px; text-align: center; line-height: 30px; }
 
 	}//end xlarge breakpoint
 

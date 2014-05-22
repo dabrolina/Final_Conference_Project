@@ -1110,7 +1110,7 @@ About Page
   ----
   */
 }
-/* line 15, ../scss/pages/_about.scss */
+/* line 17, ../scss/pages/_about.scss */
 #about .conference {
   margin: auto;
   width: 99%;
@@ -1122,11 +1122,10 @@ About Page
   padding-top: 2px;
   padding-bottom: 2px;
 }
-/* line 28, ../scss/pages/_about.scss */
+/* line 30, ../scss/pages/_about.scss */
 #about .date {
   margin: auto;
   width: 100%;
-  background-color: #F0F0F0;
   border: none;
   padding-left: 2px;
   padding-right: 7px;
@@ -1134,11 +1133,10 @@ About Page
   padding-bottom: 2px;
   float: left;
 }
-/* line 41, ../scss/pages/_about.scss */
+/* line 42, ../scss/pages/_about.scss */
 #about .location {
   margin: auto;
   width: 100%;
-  background-color: #F0F0F0;
   border: none;
   padding-left: 7px;
   padding-right: 2px;
@@ -1308,25 +1306,7 @@ About Page
   #about {
     background-color: green;
   }
-  /* line 246, ../scss/pages/_about.scss */
-  #about .session {
-    width: 50%;
-    padding: 0 15px;
-    float: left;
-  }
-  /* line 250, ../scss/pages/_about.scss */
-  #about .commuting {
-    width: 50%;
-    padding: 0 15px;
-    float: left;
-  }
-}
-@media only screen and (min-width: 67.5em) {
-  /* line 11, ../scss/pages/_about.scss */
-  #about {
-    background-color: yellow;
-  }
-  /* line 262, ../scss/pages/_about.scss */
+  /* line 248, ../scss/pages/_about.scss */
   #about .session {
     width: 100%;
     padding: 0;
@@ -1336,15 +1316,53 @@ About Page
   #about .session:last-of-type {
     float: right;
   }
-  /* line 267, ../scss/pages/_about.scss */
+  /* line 252, ../scss/pages/_about.scss */
   #about .commuting {
-    width: 25%;
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 256, ../scss/pages/_about.scss */
+  #about .conference {
+    background-color: black;
+  }
+  /* line 260, ../scss/pages/_about.scss */
+  #about .datloc {
+    background-color: #E7D000;
+    width: 66.66667%;
     padding: 0 15px;
     float: left;
   }
   /* line 271, ../scss/pages/_about.scss */
-  #about .car, #about .subway, #about .bus, #about .path {
-    clear: none;
+  #about p.address {
+    color: white;
+    font-size: 17px;
+    font-family: Arial;
+    line-height: 20px;
+    padding-bottom: 12px;
+  }
+  /* line 272, ../scss/pages/_about.scss */
+  #about p.datloc {
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 67.5em) {
+  /* line 11, ../scss/pages/_about.scss */
+  #about {
+    background-color: yellow;
+  }
+  /* line 282, ../scss/pages/_about.scss */
+  #about .session {
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
+  /* line 50, ../scss/_mixins.scss */
+  #about .session:last-of-type {
+    float: right;
   }
 }
 @media only screen and (min-width: 80em) {
@@ -1352,17 +1370,92 @@ About Page
   #about {
     background-color: blue;
   }
-  /* line 281, ../scss/pages/_about.scss */
+  /* line 299, ../scss/pages/_about.scss */
   #about .session {
     width: 33.33333%;
     padding: 0 15px;
     float: left;
   }
-  /* line 285, ../scss/pages/_about.scss */
-  #about .map {
+  /* line 303, ../scss/pages/_about.scss */
+  #about .date {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 307, ../scss/pages/_about.scss */
+  #about .location {
+    width: 50%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 311, ../scss/pages/_about.scss */
+  #about .mapbox {
     width: 66.66667%;
     padding: 0 15px;
     float: left;
+  }
+  /* line 315, ../scss/pages/_about.scss */
+  #about .map {
+    margin: 20px;
+  }
+  /* line 319, ../scss/pages/_about.scss */
+  #about .commuting {
+    width: 25%;
+    padding: 0 15px;
+    float: left;
+  }
+  /* line 323, ../scss/pages/_about.scss */
+  #about .car, #about .subway, #about .bus, #about .path {
+    clear: none;
+  }
+  /* line 327, ../scss/pages/_about.scss */
+  #about .directions {
+    width: 100%;
+    padding: 0;
+    float: none;
+  }
+  /* line 50, ../scss/_mixins.scss */
+  #about .directions:last-of-type {
+    float: right;
+  }
+  /* line 331, ../scss/pages/_about.scss */
+  #about h1.heading {
+    color: #F49800;
+  }
+  /* line 332, ../scss/pages/_about.scss */
+  #about h1.intraheading {
+    color: #996600;
+    padding-top: 20px;
+    padding-left: 16%;
+    font-size: 23px;
+  }
+  /* line 333, ../scss/pages/_about.scss */
+  #about h2.subheading {
+    font-size: 20px;
+    color: #663300;
+    font-weight: bold;
+  }
+  /* line 335, ../scss/pages/_about.scss */
+  #about p.abo {
+    color: white;
+    font-size: 15px;
+    line-height: 21px;
+  }
+  /* line 336, ../scss/pages/_about.scss */
+  #about p.aboloc {
+    color: black;
+    font-size: 17px;
+    font-family: Arial;
+    line-height: 20px;
+    padding-bottom: 12px;
+  }
+  /* line 337, ../scss/pages/_about.scss */
+  #about p.abodate {
+    color: black;
+    font-size: 30px;
+    padding: 20px;
+    text-align: center;
+    line-height: 30px;
   }
 }
 @media only screen and (min-width: 90em) {
