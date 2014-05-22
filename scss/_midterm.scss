@@ -6,7 +6,7 @@
 									= = = = = = = = = = = = = =
 									*/
 
-body {
+.body {
 width:99%;
 margin:0 auto;
 border:none;
@@ -23,17 +23,16 @@ CONTAINERS STYLE
 {
 	margin:auto;
 	width:99%;
-	background-color: #808080;
+	background-color: black;
 	padding: 10px;
 	border: none;
-	;
 }
 
 .navigation
 {
 	margin: auto;
 	width: 100%;
-	background-color: #808080;
+	background-color: black;
 	border: none;
 	clear: both;
 	padding-top: 3px;
@@ -43,7 +42,7 @@ CONTAINERS STYLE
 {
 	margin:auto;
 	width:49%;
-	background-color: #808080;
+	background-color: black;
 	border: none;
 	float: left;
 	padding-top: 20px;
@@ -55,7 +54,7 @@ CONTAINERS STYLE
 {
 	margin:auto;
 	width:49%;
-	background-color: #808080;
+	background-color: black;
 	border: none;
 	float: right;
 	padding-top: 20px;
@@ -67,7 +66,7 @@ CONTAINERS STYLE
 {
 	margin:auto;
 	width:45%;
-	background-color: #808080;
+	background-color: black;
 	border: none;
 	float: right;
 	padding-top: 2px;
@@ -80,7 +79,7 @@ CONTAINERS STYLE
 {
 	margin:auto;
 	width:98%;
-	background-color: #808080;
+	background-color: black;
 	border: none;
 	float: right;
 	padding-top: 2px;
@@ -116,7 +115,7 @@ CONTAINERS STYLE
 {
 	margin:auto;
 	width:99%;
-	background-color: #808080;
+	background-color: black;
 	border:none;
 	clear: both;
 }
@@ -346,7 +345,6 @@ p.speaker	/*home*/
 		text-indent: 0px;
 		text-decoration:none;
 		clear:both;
-		margin: 10px;
 		line-height: 17px;
 	}
 

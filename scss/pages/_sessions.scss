@@ -7,7 +7,7 @@ Sessions Page
 //layout
 #sessions{
 
-
+background-color: #F0F0F0;
 
 // default layout =============================================
 
@@ -194,29 +194,16 @@ p.pres	/*sessions*/
 		clear:both;
 	}
 
-	//x-small =============================================
-	@include breakpoint(x-small){
-		background-color: violet;
-
-	}//end x-small breakpoint
-
-
-
-	//small =============================================
-	@include breakpoint(small){
-		background-color: red;
-		
-	}//end small breakpoint
-
 
 
 	//medium breakpoint =============================================
 	@include breakpoint(medium){
-		background-color: green;
+		background-color: #F0F0F0;
 		
 		.info{
 		}
 
+		h1.title{ font-size: 50px; }
 
 		.fa, .pa, .cw, .ma{
 			clear: both;
@@ -230,29 +217,78 @@ p.pres	/*sessions*/
 		.session{
 			@include col(1,2);
 		}
+
+		h1.ses{ font-size: 25px; padding: 20px; }
+
+		a.menu	/*all - the navigation*/
+
+			{	
+				font-size: 45px;
+			}
+
+		a.nav	/*all - the navigation*/
+
+			{	
+				font-size: 30px; line-height: 40px; margin-left: 35%;
+			}
+
+		a.top	/*all - the navigation*/
+
+			{	
+				font-size: 17px;
+			}
+
+			p.add1	/*all*/
+
+			{	
+				color: #F0F0F0; font-size: 11px; padding-top: 70px;
+			}
+
+			p.add2	/*all*/
+			{	
+				color: #F0F0F0; font-size: 11px; padding-bottom: 30px;
+			}
+
+		a.menu	/*all - the navigation*/
+
+			{	
+				font-size: 45px;
+			}
+
+		a.nav	/*all - the navigation*/
+
+			{	
+				font-size: 30px; line-height: 40px; margin-left: 35%;
+			}
+
+		a.top	/*all - the navigation*/
+
+			{	
+				font-size: 17px;
+			}
+
+			p.add1	/*all*/
+
+			{	
+				color: #F0F0F0; font-size: 11px; padding-top: 70px;
+			}
+
+			p.add2	/*all*/
+			{	
+				color: #F0F0F0; font-size: 11px; padding-bottom: 30px;
+			}
 	}// end medium breakpoint
-
-
-
-	//large breakpoint =============================================
-	@include breakpoint(large){
-		background-color: yellow;
-
-		
-		
-
-	}//end large breakpoint
-
 
 
 	//x-large breakkpoint  =============================================
 	@include breakpoint(x-large){
-		background-color: blue;
-		color: white;
+		background-color: #F0F0F0;
 		
 		.info
 		{}
 
+		h1.title{ font-size: 65px; }
+		
 		.session{
 			@include col(1,4);
 		}
@@ -264,12 +300,37 @@ p.pres	/*sessions*/
 		.newline{
 			clear: none;
 		}
+
+		h1.ses{ font-size: 35px; padding: 20px; }
+
+		a.menu	/*all - the navigation*/
+
+			{	
+				font-size: 60px;
+			}
+
+		a.nav	/*all - the navigation*/
+
+			{	
+				font-size: 40px; line-height: 40px; margin-left: 35%;
+			}
+
+		a.top	/*all - the navigation*/
+
+			{	
+				font-size: 25px;
+			}
+
+			p.add1	/*all*/
+
+			{	
+				color: #F0F0F0; font-size: 12px; padding-top: 70px;
+			}
+
+			p.add2	/*all*/
+			{	
+				color: #F0F0F0; font-size: 12px; padding-bottom: 30px;
+			}
 	}//end xlarge breakpoint
 
-
-	//xx-large breakpoint  =============================================
-	@include breakpoint(xx-large){
-		background-color: orange;
-
-	}//end xxlarge breakpoint
 }//end #about

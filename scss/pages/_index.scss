@@ -17,6 +17,11 @@ Index Page (homepage)
 		margin-bottom: $spacer;
 	}
 
+	background-color: #F0F0F0;
+	
+	.header{
+
+	}
 	.featuredInfo{
 		
 	}
@@ -41,57 +46,13 @@ Index Page (homepage)
 		background-color: #F0F0F0;
 	}
 
-
-	//x-small =============================================
-	@include breakpoint(x-small){
-		background-color: violet;
-
-	}//end x-small
-
-	//small =============================================
-	@include breakpoint(small){
-		background-color: red;
-		/*.featuredInfo{
-		//	@include no-col();
-		}
-		.date-location{
-		//	@include col(1,3);
-		}
-		.featuredSpeakers{
-		//	@include col(2,3);
-		}
-		.speaker img{
-			width:50%;
-			float:right;
-		}
-		.speaker h3{
-			width:50%;
-			float: left;
-		}
-		.speaker{
-			@include pie-clearfix();
-			margin-bottom: $spacer;
-		}*/
-
-	}//end small
-
-
 	//medium breakpoint =============================================
 	@include breakpoint(medium){
-		background-color: green;
+		background-color: #F0F0F0;
 
-
-		/*.info{
-			background-color: blue;
-			img{
-				@include no-col();
-			}
-			h3{
-				@include no-col();
-			}
-		}
-		*/
 		.info{}
+
+		
 
 		.content{
 			background-color: #F0F0F0;
@@ -139,53 +100,46 @@ Index Page (homepage)
 		p.speaker{ font-size: 1.0em; }
 		p.section{ font-size: 1.0em; }
 		h1.heading { color: #F49800; }
-		h1.intraheading { color: #996600; padding-top: 20px; padding-left: 16%; font-size: 23px; }
+		h1.intraheading { color: #996600; padding-top: 20px; text-align: center; font-size: 31px; }
 		h2.subheading { font-size: 20px; color: #663300; font-weight: bold; }
 		p.address { color: white; font-size: 14px; }
 		p.date{ color: white; font-size: 20px; }
 
+		a.menu	/*all - the navigation*/
 
+			{	
+				font-size: 45px;
+			}
+
+		a.nav	/*all - the navigation*/
+
+			{	
+				font-size: 30px; line-height: 40px; margin-left: 35%;
+			}
+
+		a.top	/*all - the navigation*/
+
+			{	
+				font-size: 17px;
+			}
+
+			p.add1	/*all*/
+
+			{	
+				color: #F0F0F0; font-size: 11px; padding-top: 70px;
+			}
+
+			p.add2	/*all*/
+			{	
+				color: #F0F0F0; font-size: 11px; padding-bottom: 30px;
+			}
 
 	}// end medium breakpoint
 
 
-
-	//large breakpoint =============================================
-	@include breakpoint(large){
-		background-color: yellow;
-
-		/*.featuredSpeakers{
-			//@include col(12,12);
-			h2{
-				@include col(1,1);
-			}
-		}
-		.speaker{
-			@include col(1,4);
-		}
-
-		.featuredInfo{
-			@include col(12,12);
-		}
-
-		.introduction{
-			@include col(8,12);
-			font-size: 1.6em
-		}
-
-		.date, .location{
-			@include col(2,12);
-		}
-
-		.track{
-			@include col(6,12);
-		}*/
-	}//end large breakpoint
-
 	//x-large breakpoint  =============================================
 	@include breakpoint(x-large){
-		background-color: blue;
-		color: white;
+		background-color: #F0F0F0;
 
 		.info{}
 
@@ -235,12 +189,37 @@ Index Page (homepage)
 		p.address { color: white; font-size: 17px; font-family: Arial; line-height: 20px; padding-bottom: 12px; }
 		p.date{ color: white; font-size: 30px; padding: 20px; text-align: center; }
 
+	a.menu	/*all - the navigation*/
+
+			{	
+				font-size: 60px;
+			}
+
+		a.nav	/*all - the navigation*/
+
+			{	
+				font-size: 40px; line-height: 40px; margin-left: 35%;
+			}
+
+		a.top	/*all - the navigation*/
+
+			{	
+				font-size: 25px;
+			}
+
+			p.add1	/*all*/
+
+			{	
+				color: #F0F0F0; font-size: 12px; padding-top: 70px;
+			}
+
+			p.add2	/*all*/
+			{	
+				color: #F0F0F0; font-size: 12px; padding-bottom: 30px;
+			}
+
 	}//end xlarge breakpoint
 
-
-	@include breakpoint(xx-large){
-		background-color: orange;
-	}//end xxlarge breakpoint
 
 }
 //end #home

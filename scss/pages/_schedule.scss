@@ -13,28 +13,15 @@ Schedule Page
 
 // default layout =============================================
 
-
-	//x-small =============================================
-	@include breakpoint(x-small){
-		background-color: violet;
-
-	}//end x-small breakpoint
-
-
-
-	//small =============================================
-	@include breakpoint(small){
-		background-color: red;
-		
-	}//end small breakpoint
-
-
+background-color: #F0F0F0;
 
 	//medium breakpoint =============================================
 	@include breakpoint(medium){
-		background-color: green;
+		background-color: #F0F0F0;
 
 		.info{}
+
+		h1.title{ font-size: 50px; }
 
 		.opening{
 			@include col(1,2);
@@ -75,27 +62,47 @@ Schedule Page
 			background-color: #D6AD33;
 		}
 
+		a.menu	/*all - the navigation*/
 
+			{	
+				font-size: 45px;
+			}
+
+		a.nav	/*all - the navigation*/
+
+			{	
+				font-size: 30px; line-height: 40px; margin-left: 35%;
+			}
+
+		a.top	/*all - the navigation*/
+
+			{	
+				font-size: 17px;
+			}
+
+			p.add1	/*all*/
+
+			{	
+				color: #F0F0F0; font-size: 11px; padding-top: 70px;
+			}
+
+			p.add2	/*all*/
+			{	
+				color: #F0F0F0; font-size: 11px; padding-bottom: 30px;
+			}
 
 	}// end medium breakpoint
 
 
 
-	//large breakpoint =============================================
-	@include breakpoint(large){
-		background-color: yellow;
-
-	}//end large breakpoint
-
-
-
-	//x-large breakkpoint  =============================================
+	//x-large breakpoint  =============================================
 	@include breakpoint(x-large){
-		background-color: blue;
-		color: white;
+		background-color: #F0F0F0;
 
 		.info{}
 
+		h1.title{ font-size: 65px; }
+		
 		.content{
 			background-color: #F0F0F0;
 		}
@@ -125,12 +132,34 @@ Schedule Page
 			clear: both;
 		}
 
+		a.menu	/*all - the navigation*/
+
+			{	
+				font-size: 60px;
+			}
+
+		a.nav	/*all - the navigation*/
+
+			{	
+				font-size: 40px; line-height: 40px; margin-left: 35%;
+			}
+
+		a.top	/*all - the navigation*/
+
+			{	
+				font-size: 25px;
+			}
+
+			p.add1	/*all*/
+
+			{	
+				color: #F0F0F0; font-size: 12px; padding-top: 70px;
+			}
+
+			p.add2	/*all*/
+			{	
+				color: #F0F0F0; font-size: 12px; padding-bottom: 30px;
+			}
 	}//end xlarge breakpoint
 
-
-	//xx-large breakpoint  =============================================
-	@include breakpoint(xx-large){
-		background-color: orange;
-
-	}//end xxlarge breakpoint
 }//end #about

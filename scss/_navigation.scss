@@ -4,3 +4,112 @@
 * put your navigation CSS here
 * ============================= 
 */  
+
+// default layout =============================================
+	
+	.header{
+		background-color: black;	
+	}
+
+	//x-small =============================================
+	@include breakpoint(x-small){
+		background-color: violet;
+
+	}//end x-small breakpoint
+
+
+
+	//small =============================================
+	@include breakpoint(small){
+		background-color: red;
+		
+	}//end small breakpoint
+
+
+
+	//medium breakpoint =============================================
+	@include breakpoint(medium){
+		background-color: green;
+
+		.info{}
+
+		h1.title
+			{	
+			
+			}
+		a.nav	/*all - the navigation*/
+
+			{	
+				font-size: 70px;
+			}
+
+		ul	/*all*/
+			{	
+
+			}
+
+
+		a.menu	/*all - the navigation*/
+
+			{	
+				font-size: 60px;
+			}
+
+		a.top	/*all - the navigation*/
+
+			{	
+
+			}
+
+		p.add1	/*all*/
+
+			{	
+			
+			}
+
+		p.add2	/*all*/
+			{	
+			
+			}
+		
+		}// end medium breakpoint
+
+
+
+	//large breakpoint =============================================
+	@include breakpoint(large){
+		background-color: yellow;
+
+		.session{
+			@include no-col();
+		}
+
+
+	
+
+	}//end large breakpoint
+
+	//x-large breakkpoint  =============================================
+	@include breakpoint(x-large){
+		background-color: blue;
+
+		.info{
+
+		}
+
+		
+	}//end xlarge breakpoint
+
+
+	//xx-large breakpoint  =============================================
+	@include breakpoint(xx-large){
+		background-color: orange;
+
+
+
+
+
+
+
+	}//end xxlarge breakpoint
+}//end #navigation
